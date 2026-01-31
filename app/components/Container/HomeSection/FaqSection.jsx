@@ -27,6 +27,7 @@ export default function FAQSection() {
           </p>
         </div>
         <div
+          data-lenis-prevent
           className="
             space-y-4
             max-h-[90vh]

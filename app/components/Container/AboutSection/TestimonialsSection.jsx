@@ -1,6 +1,6 @@
 "use client";
-
 import TestimonialCard from "@/app/common/TestimonialCard";
+import { testimonials } from "@/app/utils/mockdata";
 
 export default function TestimonialsSection() {
   return (
@@ -27,8 +27,8 @@ export default function TestimonialsSection() {
           sm:overflow-visible
         "
       >
-        {[1, 2, 3, 4, 5].map((_, i) => (
-          <TestimonialCard key={i} />
+        {testimonials?.map((item, i) => (
+          <TestimonialCard key={i} item={item} />
         ))}
       </div>
     </section>

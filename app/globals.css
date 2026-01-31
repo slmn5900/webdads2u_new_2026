@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 @import "tailwindcss";
+
 :root {
   --font-inter: "Inter", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
@@ -16,38 +17,37 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-  overscroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
 }
 
 .text_primary {
   color: var(--primary-red);
-}
-.text_manrope {
-  font-family: var(--font-manrope);
 }
 
 .bg_primary {
   background-color: var(--primary-red);
 }
 
-.scrollbar-hide::-webkit-scrollbar {
-  display: none !important;
+.text_manrope {
+  font-family: var(--font-manrope);
 }
 
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
 
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-[style*="overflow-y: auto"],
-[style*="overflow: auto"],
+
 .overflow-y-auto,
 .overflow-auto {
-  overscroll-behavior: contain;
+  overscroll-behavior: auto;
 }
+
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -57,20 +57,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    180deg,
-    #9333ea,
-    #a855f7,
-    #ec4899
-  );
+  background: linear-gradient(180deg, #9333ea, #a855f7, #ec4899);
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    180deg,
-    #7e22ce,
-    #9333ea,
-    #db2777
-  );
+  background: linear-gradient(180deg, #7e22ce, #9333ea, #db2777);
 }

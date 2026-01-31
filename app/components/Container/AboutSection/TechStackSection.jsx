@@ -55,7 +55,7 @@ export default function TechStackSection() {
     <section className="relative min-h-screen bg-black text-white overflow-hidden px-6 flex flex-col justify-center">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[85%] h-[70%] bg-purple-600/20 blur-[180px]" />
       <div className="relative z-10 text-center max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-light leading-tight">
+        <h2 className="text-4xl md:text-5xl font-light leading-tight mt-5 md:mt-0">
           Advanced Tech Stack for <br />
           Performance, Scalability & Innovation
         </h2>

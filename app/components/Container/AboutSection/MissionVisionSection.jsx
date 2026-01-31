@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { ChevronUp, ChevronDown } from "lucide-react";
 
@@ -7,17 +6,17 @@ const items = [
   {
     title: "Our Mission",
     content:
-      "Be fearless, challenge the norms, and inspire everyone to achieve excellence. We aim to create meaningful digital experiences that empower brands to grow, adapt, and lead in a fast-evolving world.",
+      "To build digital solutions that support business growth and change. We combine strong technology, smart design, and practical thinking to create solutions that address real challenges and deliver measurable value.",
   },
   {
     title: "Our Vision",
     content:
-      "To become a globally trusted digital partner that drives innovation, shapes future-ready brands, and delivers technology-driven growth across industries and borders.",
+      "To be a reliable global technology partner, helping businesses move forward with scalable, innovative, and future-ready digital solutions that stand the test of time.",
   },
   {
     title: "Our Values",
     content:
-      "Innovation, integrity, collaboration, and excellence guide everything we do. We believe in building long-term partnerships through transparency, creativity, and measurable impact.",
+      "We approach technology with intention, focusing on quality, consistency, and lasting impact. Open communication and honesty shape how we work and help us build long-term partnerships based on trust. By keeping users at the center and embracing continuous learning, we evolve with the digital landscape and deliver solutions that truly make a difference.",
   },
 ];
 
@@ -41,7 +40,7 @@ export default function MissionVisionSection() {
           </h2>
         </div>
         <div className="space-y-8">
-          {items.map((item, index) => {
+          {items?.map((item, index) => {
             const isOpen = active === index;
             return (
               <div key={index}>

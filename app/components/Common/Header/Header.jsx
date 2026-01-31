@@ -14,54 +14,71 @@ const menuItems = [
   { label: "Contact", path: "/contact" },
 ];
 
-const servicesData = {
-  categories: [
-    { title: "Web Development", color: "from-blue-500 to-cyan-500" },
-    { title: "Ecommerce Development", color: "from-emerald-500 to-teal-500" },
-    { title: "ERP Software", color: "from-amber-500 to-orange-500" },
-    { title: "Digital Marketing", color: "from-rose-500 to-pink-500" },
-    {
-      title: "Search Engine Optimization",
-      color: "from-indigo-500 to-purple-500",
-    },
-    {
-      title: "Artificial Intelligence",
-      color: "from-violet-500 to-fuchsia-500",
-    },
-    { title: "Virtual Reality", color: "from-green-500 to-emerald-500" },
-    { title: "Video Production", color: "from-red-500 to-rose-500" },
-    { title: "UI/UX Design", color: "from-purple-500 to-indigo-500" },
-    { title: "IT Resource Outpouring", color: "from-sky-500 to-blue-500" },
-    {
-      title: "Social Media Marketing",
-      color: "from-fuchsia-500 to-purple-500",
-    },
-    {
-      title: "Generative Engine Optimization",
-      color: "from-cyan-500 to-blue-500",
-    },
-    { title: "Augmented Reality", color: "from-lime-500 to-green-500" },
-    {
-      title: "Digital Branding & Creatives",
-      color: "from-amber-500 to-yellow-500",
-    },
-    { title: "2D/3D Video Animation", color: "from-pink-500 to-rose-500" },
-  ],
-  clients: [
-    "BECYOND",
-    "DIFC",
-    "fludubar",
-    "SEPHORA",
-    "SQUIED",
-    "skillbridge",
-    "EXO",
-    "EMDAD",
-    "mediaPr6",
-    "AMD",
-    "CHANA",
-  ],
-  rating: "5-Star Rated, Works with GCC Giants",
-};
+const servicesData = [
+  {
+    title: "Website Development",
+    children: [
+      "Web Portal Development",
+      "Wordpress Web Development",
+      "ReactJS Web Development",
+      "Php Web Development",
+      "Custom Web Development",
+    ],
+  },
+  {
+    title: "SEO Services",
+    children: [
+      "Digital Marketing",
+      "PPC Service",
+      "E-commerce SEO",
+      "Local SEO",
+      "Off Page SEO",
+      "Link Building",
+      "Content Writing",
+    ],
+  },
+  {
+    title: "Mobile App Development",
+    children: [
+      "IOS App Development",
+      "Android App Development",
+      "Flutter App Development",
+      "React Native",
+      "Mobile App UI/UX",
+    ],
+  },
+  {
+    title: "Web Design",
+    children: [
+      "HTML5 Website Design",
+      "Domain Registration",
+      "Hosting",
+      "Responsive Website",
+      "UI/UX Design",
+      "Website Redesign",
+      "Maintenance",
+    ],
+  },
+  {
+    title: "Branding Design",
+    children: [
+      "Logo Design",
+      "Brochure Design",
+      "Social Media Design",
+      "Flyer Design",
+      "Business Card",
+      "Letterhead",
+    ],
+  },
+  {
+    title: "CRM & ERP",
+    children: ["Customized CRM", "Customized ERP"],
+  },
+  {
+    title: "E-Commerce Development",
+    children: ["WooCommerce", "OpenCart", "Shopify"],
+  },
+];
 
 const MenuToggle = ({ isOpen, toggle }) => (
   <motion.button
@@ -91,6 +108,7 @@ export default function Header() {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isServicesHovered, setIsServicesHovered] = useState(false);
   const [servicesTimeout, setServicesTimeout] = useState(null);
+  const [openService, setOpenService] = useState(null);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -116,6 +134,7 @@ export default function Header() {
 
   const handleNavClick = (item) => {
     setIsMenuOpen(false);
+    setIsServicesHovered(false);
     router.push(item.path);
   };
 
@@ -145,6 +164,13 @@ export default function Header() {
       setIsServicesHovered(false);
     }, 300);
     setServicesTimeout(timeout);
+  };
+
+  const goToService = (service, child) => {
+    const slug = child.toLowerCase().replace(/&/g, "and").replace(/\s+/g, "-");
+    setIsServicesHovered(false);
+    setOpenService(null);
+    router.push(`/service/${slug}`);
   };
 
   return (
@@ -194,7 +220,7 @@ export default function Header() {
                   </button>
                   {item.label === "Services" && isServicesHovered && (
                     <motion.div
-                      className="absolute left-28 -translate-x-1/2 top-full mt-6 w-screen max-w-5xl px-8"
+                      className="absolute left-28 -translate-x-1/2 top-full mt-6 w-screen max-w-6xl px-8"
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
@@ -203,31 +229,46 @@ export default function Header() {
                       onMouseLeave={handleDropdownMouseLeave}
                     >
                       <div className="bg-black/90 backdrop-blur-xl border border-white/50 rounded-2xl p-8 shadow-2xl">
-                        <div className="grid grid-cols-3 gap-4 mb-8">
-                          {servicesData.categories.map((service, index) => (
-                            <motion.div
-                              key={index}
-                              className="group relative overflow-hidden rounded-xl p-4 cursor-pointer"
-                              whileHover={{ scale: 1.02 }}
-                              transition={{ duration: 0.2 }}
-                            >
-                              <div
-                                className={`absolute inset-0  opacity-10 group-hover:opacity-20 transition-opacity duration-300`}
-                              />
-                              <div className="absolute inset-0 border border-white/5 rounded-xl" />
-                              <div className="relative">
-                                <div className="flex items-center justify-between mb-2">
-                                  <h3 className="text-sm font-semibold text-white">
-                                    {service.title}
-                                  </h3>
-                                  <ArrowRight
-                                    size={14}
-                                    className="text-white/50 group-hover:text-white transform group-hover:translate-x-1 transition-all duration-300"
-                                  />
-                                </div>
-                                <div className="h-1 w-8 rounded-full bg-linear-to-r from-white/30 to-transparent" />
-                              </div>
-                            </motion.div>
+                        <div className="grid grid-cols-4 gap-8">
+                          {servicesData?.map((service, index) => (
+                            <div key={index}>
+                              <button
+                                onMouseEnter={() => setOpenService(index)}
+                                className="flex items-center justify-between w-full text-white font-semibold mb-3"
+                              >
+                                {service.title}
+
+                                <motion.span
+                                  animate={{
+                                    rotate: openService === index ? 90 : 0,
+                                  }}
+                                >
+                                  <ArrowRight size={16} />
+                                </motion.span>
+                              </button>
+                              <AnimatePresence>
+                                {openService === index && (
+                                  <motion.ul
+                                    initial={{ opacity: 0, height: 0 }}
+                                    animate={{ opacity: 1, height: "auto" }}
+                                    exit={{ opacity: 0, height: 0 }}
+                                    className="space-y-2 text-sm text-white/70"
+                                  >
+                                    {service.children.map((child, i) => (
+                                      <li
+                                        key={i}
+                                        onClick={() =>
+                                          goToService(service.title, child)
+                                        }
+                                        className="hover:text-white cursor-pointer transition"
+                                      >
+                                        {child}
+                                      </li>
+                                    ))}
+                                  </motion.ul>
+                                )}
+                              </AnimatePresence>
+                            </div>
                           ))}
                         </div>
                       </div>
@@ -244,12 +285,18 @@ export default function Header() {
               >
                 Hire us <ArrowRight size={16} />
               </Link>
-              <button className="hidden lg:flex text-white h-8 w-8 items-center justify-center rounded-full border border-white/20 hover:bg-purple-500/20">
+              <a
+                href="mailto:info@webdads2u.com"
+                className="hidden lg:flex text-white h-8 w-8 items-center justify-center rounded-full border border-white/20 hover:bg-purple-500/20"
+              >
                 <Mail size={14} />
-              </button>
-              <button className="hidden lg:flex text-white h-8 w-8 items-center justify-center rounded-full border border-white/20 hover:bg-purple-500/20">
+              </a>
+              <a
+                href="tel:+97148346571"
+                className="hidden lg:flex text-white h-8 w-8 items-center justify-center rounded-full border border-white/20 hover:bg-purple-500/20"
+              >
                 <Phone size={14} />
-              </button>
+              </a>
               <MenuToggle
                 isOpen={isMenuOpen}
                 toggle={() => setIsMenuOpen(!isMenuOpen)}

@@ -2,9 +2,12 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MainLayout from "@/app/common/MainLayout";
+import schedule from "@/app/assets/schedule.svg";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const HeroSection = () => {
-  
+  const router = useRouter();
   const headlines = [
     "Better Digital Marketing Solution",
     "Better Web Development Solution",
@@ -21,6 +24,10 @@ const HeroSection = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
+
+  const handleNavigate = () => {
+    router.push("/contact");
+  };
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -56,8 +63,9 @@ const HeroSection = () => {
           </p>
           <div className="flex gap-6 items-center mt-4">
             <button
+              onClick={handleNavigate}
               className="
-            
+            cursor-pointer
     group relative flex items-center gap-3
     overflow-hidden
     rounded-full
@@ -80,8 +88,8 @@ const HeroSection = () => {
                 Schedule a call
               </span>
               <span className="relative z-10 w-8 h-8 rounded-full overflow-hidden border border-white">
-                <img
-                  src="https://randomuser.me/api/portraits/women/68.jpg"
+                <Image
+                  src={schedule}
                   className="w-8 h-8 rounded-full"
                   alt="avatar"
                 />

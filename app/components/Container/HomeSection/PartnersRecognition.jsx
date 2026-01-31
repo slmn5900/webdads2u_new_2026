@@ -1,43 +1,60 @@
 "use client";
 import { motion } from "framer-motion";
+import client1 from "@/app/assets/client1.svg";
+import client2 from "@/app/assets/client2.svg";
+import client3 from "@/app/assets/client3.svg";
+import client4 from "@/app/assets/client4.svg";
+import client5 from "@/app/assets/client5.svg";
+import client6 from "@/app/assets/client6.svg";
+import client7 from "@/app/assets/client7.svg";
+import client8 from "@/app/assets/client8.svg";
+import client9 from "@/app/assets/client9.svg";
+import client10 from "@/app/assets/client10.svg";
+import client11 from "@/app/assets/client11.svg";
+import client12 from "@/app/assets/client12.svg";
+import Image from "next/image";
+
 const partners = [
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
-    url: "https://www.facebook.com/business/partners",
+    src: client1,
   },
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
-    url: "https://www.facebook.com/business/partners",
+    src: client2,
   },
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
-    url: "https://www.facebook.com/business/partners",
+    src: client3,
   },
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
-    url: "https://www.facebook.com/business/partners",
+    src: client4,
   },
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/3/3f/HubSpot_Logo.svg",
-    url: "https://www.hubspot.com/partners",
+    src: client5,
   },
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/3/3f/HubSpot_Logo.svg",
-    url: "https://www.hubspot.com/partners",
+    src: client6,
   },
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
-    url: "https://partner.microsoft.com",
+    src: client7,
   },
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
-    url: "https://partner.microsoft.com",
+    src: client8,
+  },
+  {
+    src: client9,
+  },
+  {
+    src: client10,
+  },
+  {
+    src: client11,
+  },
+  {
+    src: client12,
   },
 ];
 
 const row1 = partners.slice(0, Math.ceil(partners.length / 2));
 const row2 = partners.slice(Math.ceil(partners.length / 2));
-
 const marqueeVariants = {
   left: {
     x: ["0%", "-50%"],
@@ -61,33 +78,31 @@ const LogoRow = ({ logos, direction }) => (
       animate={direction}
     >
       {[...logos, ...logos].map((logo, index) => (
-        <a
+        <div
           key={index}
-          href={logo.url}
-          target="_blank"
           rel="noopener noreferrer"
           className="
             group flex items-center justify-center
             h-32 w-60 rounded-2xl
-            borde border-2 border-white/15
+            border border-white/15
             bg-white/5 backdrop-blur-sm
             transition-all duration-300
             hover:border-white/30
             hover:bg-white/10
           "
         >
-          <img
+          <Image
             src={logo.src}
             alt="Partner logo"
+            width={140}
+            height={60}
             className="
-              h-[60px] w-auto object-contain
+              object-contain
               transition
-              group-hover:grayscale-0
               group-hover:opacity-100
             "
-            loading="lazy"
           />
-        </a>
+        </div>
       ))}
     </motion.div>
   </div>

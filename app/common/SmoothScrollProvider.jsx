@@ -10,42 +10,28 @@ export default function SmoothScrollProvider({ children }) {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.6,
-      smooth: true,
+      duration: 1.4,
       smoothWheel: true,
       smoothTouch: false,
       easing: (t) => 1 - Math.pow(1 - t, 3),
     });
 
-    window.lenis = lenis;
     lenisRef.current = lenis;
 
-    const raf = (time) => {
+    function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
-    };
+    }
 
     requestAnimationFrame(raf);
-
-    const preventLenisOnScrollable = () => {
-      document
-        .querySelectorAll(".overflow-y-auto, .overflow-auto")
-        .forEach((el) => {
-          if (!el.hasAttribute("data-lenis-prevent")) {
-            el.setAttribute("data-lenis-prevent", "");
-          }
-        });
-    };
-
-    preventLenisOnScrollable();
 
     return () => {
       lenis.destroy();
       lenisRef.current = null;
-      window.lenis = null;
     };
   }, []);
 
+  // Reset scroll on route change
   useEffect(() => {
     if (lenisRef.current) {
       lenisRef.current.scrollTo(0, { immediate: true });

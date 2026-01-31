@@ -1,50 +1,49 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-const dummyLogo = (name) => {
-  const initials = name
-    .split(" ")
-    .map((n) => n)
-    .join("")
-    .slice(0, 3)
-    .toUpperCase();
-
-  return `data:image/svg+xml;utf8,
-    <svg xmlns='http://www.w3.org/2000/svg' width='320' height='160'>
-      <rect width='100%' height='100%' rx='16' fill='%23181818'/>
-      <text x='50%' y='50%'
-        dominant-baseline='middle'
-        text-anchor='middle'
-        font-size='48'
-        font-family='Arial, Helvetica, sans-serif'
-        fill='%23a855f7'
-        font-weight='600'>
-        ${initials}
-      </text>
-    </svg>`;
-};
+import designed1 from "@/app/assets/designed1.svg";
+import designed2 from "@/app/assets/designed2.svg";
+import designed3 from "@/app/assets/designed3.svg";
+import designed4 from "@/app/assets/designed4.svg";
+import designed5 from "@/app/assets/designed5.svg";
+import designed6 from "@/app/assets/designed6.svg";
+import designed7 from "@/app/assets/designed7.svg";
+import designed8 from "@/app/assets/designed8.svg";
+import designed9 from "@/app/assets/designed9.svg";
+import designed10 from "@/app/assets/designed10.svg";
+import linevictor from "@/app/assets/line-vector.svg";
+import gif from "@/app/assets/globe2.gif";
 
 const clients = [
-  { name: "Beyond", desc: "Responsive web design development" },
-  { name: "GBM", desc: "Corporate digital platform" },
-  { name: "SkillBridge", desc: "Learning management system" },
-  { name: "Emdad", desc: "Enterprise portal" },
-  { name: "MediaPro", desc: "Brand website experience" },
-  { name: "Sanad", desc: "Government digital service" },
-  { name: "Sharjah Investment Forum", desc: "Event platform" },
-  { name: "Atmosphere Burj Khalifa", desc: "Luxury hospitality site" },
-  { name: "EXA", desc: "Startup landing" },
-  { name: "Terra Nexus", desc: "Web3 product UI" },
+  { name: "Food & Beverage", img: designed1 },
+  { name: "Beauty & Wellness", img: designed2 },
+  { name: "Travel & Hospitality", img: designed3 },
+  { name: "Logistics & Transportation", img: designed4 },
+  { name: "Manufacturing & Industrial", img: designed5 },
+  { name: "Real Estate & Infrastructure", img: designed6 },
+  { name: "Banking, Finance & Insurance", img: designed7 },
+  { name: "E-commerce & Retail", img: designed8 },
+  { name: "Healthcare & Medical Services", img: designed9 },
+  { name: "Education & EdTech", img: designed10 },
 ];
 
 export default function OurClients() {
   return (
-    <section className="relative overflow-hidden bg-black py-28">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)]" />
+    <section className="relative overflow-hidden bg-black">
+      <div className="absolute inset-0" />
+      <Image
+        src={linevictor}
+        alt="background lines"
+        fill
+        priority
+        className="pointer-events-none  "
+      />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="h-[420px] w-[420px] rounded-full bg-purple-600/30 blur-[160px]" />
       </div>
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
+      <div className="pointer-events-none absolute inset-6 rounded-2xl" />
+      <div className="pointer-events-none absolute inset-6 rounded-2xl" />
+      <div className="relative z-10 mx-auto max-w-7xl px-6 my-10">
         <div className="mb-20 text-center">
           <div className="mb-4 flex items-center justify-center gap-2 text-sm text-gray-300">
             <span className="h-2 w-2 rounded-full bg-purple-500" />
@@ -54,50 +53,55 @@ export default function OurClients() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 0.8,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="mx-auto max-w-3xl text-4xl md:text-5xl font-medium leading-12 text-white"
+            transition={{ duration: 0.8 }}
+            className="mx-auto max-w-3xl text-4xl md:text-5xl font-medium text-white"
           >
             The stories <br /> we designed
           </motion.h2>
         </div>
-        <div className="grid grid-cols-2 gap-x-10 gap-y-16 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 px-20">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-10  px-4 md:px-20">
           {clients?.map((client, i) => (
             <motion.div
               key={client.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{
-                delay: i * 0.05,
-                duration: 0.6,
-              }}
-              className="relative group h-[120px] flex items-center justify-center  transition"
+              transition={{ delay: i * 0.05 }}
+              className="group relative h-[120px] flex flex-col items-center justify-center"
             >
               <Image
-                src={dummyLogo(client.name)}
+                src={client.img}
                 alt={client.name}
                 width={160}
                 height={80}
-                className="max-h-10 w-auto opacity-70 grayscale transition-all duration-300 group-hover:-translate-y-4 group-hover:opacity-100 group-hover:grayscale-0"
+                className="max-h-10 w-auto  grayscale transition-all duration-300
+                group-hover:-translate-y-3 group-hover:opacity-100 group-hover:grayscale-0"
               />
-              <div className="absolute bottom-3 left-0 right-0 text-center opacity-0 translate-y-3 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                <p className="text-xs text-gray-400 px-4">
-                  Responsive web design & development
-                </p>
-              </div>
-              <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition">
-                <div className="absolute inset-0 bg-purple-500/10 blur-xl" />
-              </div>
+              <p className="mt-3 text-xs text-gray-400 opacity-0 transition-all duration-300 group-hover:opacity-100">
+                {client.name}
+              </p>
             </motion.div>
           ))}
         </div>
-        <div className="mt-24 flex items-center justify-end gap-4 text-gray-300">
-          <div className="h-10 w-10 rounded-full bg-linear-to-br from-purple-500 to-indigo-500" />
-          <span className="text-sm">500+ Clients worldwide</span>
-        </div>
+        {/* <div className=" flex items-center justify-end gap-4 text-gray-300">
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{
+              repeat: Infinity,
+              duration: 40,
+              ease: "linear",
+            }}
+          >
+            <Image
+              src={gif}
+              alt="globe rotation"
+              width={50}
+              height={50}
+              className="pointer-events-none"
+            />
+          </motion.div>
+          <span className="text-sm">100+ Clients worldwide</span>
+        </div> */}
       </div>
     </section>
   );

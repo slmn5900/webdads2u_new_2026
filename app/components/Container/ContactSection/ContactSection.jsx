@@ -5,8 +5,17 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { MapPin, Phone } from "lucide-react";
 import moon from "@/app/assets/moon.webp";
+import { useState } from "react";
 
 const ContactSection = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+
   return (
     <>
       <MainLayout
@@ -22,19 +31,93 @@ const ContactSection = () => {
               <p className="text-white/70">Contact Us</p>
             </div>
             <h1 className="text-white text-4xl  font-medium leading-12 mb-6">
-              Let’s get in touch and make <br /> things happen.
+              Grow Your Business With <br />
+              Our Expertise.
             </h1>
             <p className="text-white/70 max-w-xl mb-10 text-xs">
-              Simply click the button below to fill out a quick form, and we’ll
-              be in touch soon. Whether you have questions, ideas, or want to
-              explore how we can work together, this is the best place to reach
-              us. Let’s make something great happen!
+              We acknowledge the significance of taking a holistic approach to
+              every task and hold belief in the potency of simplicity in our Web
+              Design & Development Company in Chennai.!
             </p>
             <button className="bg-linear-to-r from-purple-600 to-pink-500 text-white px-8 py-3 rounded-full hover:scale-105 transition">
               Lets Get Started
             </button>
           </div>
           <div />
+        </div>
+      </MainLayout>
+      <MainLayout className="relative w-full min-h-screen flex items-center bg-cover bg-center px-3 md:px-20 bg-black">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center w-full">
+          <div>
+            <h1 className="text-white text-4xl font-medium leading-tight mb-6">
+              Grow Your Business With <br />
+              <span className="text-pink-500">Our Expertise</span>
+            </h1>
+            <p className="text-white/70 max-w-xl mb-10 text-sm">
+              We acknowledge the significance of taking a holistic approach to
+              every task and hold belief in the potency of simplicity in our Web
+              Design & Development Company in Chennai.
+            </p>
+            <button className="bg-linear-to-r from-purple-600 to-pink-500 text-white px-8 py-3 rounded-full hover:scale-105 transition">
+              Lets Get Started
+            </button>
+          </div>
+          <div className="relative w-full">
+            <div className="absolute -inset-1 rounded-3xl bg-linear-to-r from-purple-600 to-pink-600 blur-xl opacity-40" />
+            <div className="relative rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 p-8 space-y-6 shadow-2xl">
+              <h2 className="text-2xl font-medium text-white">
+                Ready To Get Started?
+              </h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                <input
+                  placeholder="Name"
+                  className="w-full rounded-xl bg-white/10 border border-white/20 px-4 py-3 text-white placeholder:text-white/60 outline-none focus:ring-2 focus:ring-purple-500"
+                />
+                <input
+                  placeholder="Email"
+                  className="w-full rounded-xl bg-white/10 border border-white/20 px-4 py-3 text-white placeholder:text-white/60 outline-none focus:ring-2 focus:ring-purple-500"
+                />
+                <input
+                  placeholder="Phone"
+                  className="w-full rounded-xl bg-white/10 border border-white/20 px-4 py-3 text-white placeholder:text-white/60 outline-none focus:ring-2 focus:ring-purple-500"
+                />
+                <select
+                  className="w-full rounded-xl bg-white/10 border border-white/20 px-4 py-3 text-white outline-none focus:ring-2 focus:ring-purple-500 transition"
+                  defaultValue=""
+                >
+                  <option value="" disabled className="text-gray-500">
+                    Select the service
+                  </option>
+                  <option value="website" className="text-black">
+                    Website Development
+                  </option>
+                  <option value="app" className="text-black">
+                    App Development
+                  </option>
+                  <option value="seo" className="text-black">
+                    SEO
+                  </option>
+                  <option value="digital" className="text-black">
+                    Digital Marketing
+                  </option>
+                  <option value="brochure" className="text-black">
+                    Brochure Design
+                  </option>
+                  <option value="logo" className="text-black">
+                    Logo Design
+                  </option>
+                </select>
+              </div>
+              <textarea
+                rows={4}
+                placeholder="Message"
+                className="w-full rounded-xl bg-white/10 border border-white/20 px-4 py-3 text-white placeholder:text-white/60 outline-none focus:ring-2 focus:ring-purple-500 resize-none"
+              />
+              <button className="w-full bg-linear-to-r from-purple-600 to-pink-500 py-3 rounded-xl text-white hover:scale-105 transition">
+                Submit
+              </button>
+            </div>
+          </div>
         </div>
       </MainLayout>
       <MainLayout className="relative w-full min-h-screen bg-black text-white overflow-hidden flex items-center px-3 md:px-20">
@@ -49,7 +132,7 @@ const ContactSection = () => {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
-              className="relative w-[400px] h-[400px] lg:w-[900px] lg:h-[900px]"
+              className="relative w-[400px] h-[400px] lg:w-[900px] "
             >
               <Image
                 src={moon}
@@ -61,21 +144,20 @@ const ContactSection = () => {
             </motion.div>
           </div>
           <div className="space-y-6">
-            <h2 className="text-3xl font-light">Dubai UAE</h2>
+            <h2 className="text-3xl font-light">INDIA</h2>
             <div className="flex items-start gap-3 text-gray-300 text-xs">
               <MapPin size={18} />
               <p>
-                Office M-13, The Curve Building,
+                FIRST FLOOR, 2ND PORTION, 36, Saraswathi Nagar Main Rd,
+                Saraswathi Nagar, Thirumalaiyoyal, Chennai, Tamil Nadu 600062
                 <br />
-                Sheikh Zayed Road, Dubai, UAE
+                India
               </p>
             </div>
-
             <div className="flex items-center gap-3 text-gray-300 text-xs">
               <Phone size={18} />
               <div>
-                <p>+971 4 242 1375</p>
-                <p>+971 4 834 6571</p>
+                <p>+91-88256 07550</p>
               </div>
             </div>
           </div>

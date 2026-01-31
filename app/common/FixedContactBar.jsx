@@ -8,17 +8,17 @@ import { motion, AnimatePresence } from "framer-motion";
 const contacts = [
   {
     icon: FaWhatsapp,
-    href: "https://wa.me/XXXXXXXXXX",
+    href: "https://wa.me/97148346571",
     label: "WhatsApp",
   },
   {
     icon: Mail,
-    href: "mailto:hello@yourdomain.com",
+    href: "mailto:info@webdads2u.com",
     label: "Email",
   },
   {
     icon: Phone,
-    href: "tel:+91XXXXXXXXXX",
+    href: "tel:+97148346571",
     label: "Call",
   },
 ];
@@ -30,7 +30,7 @@ export default function FixedContactBar() {
 
   useEffect(() => {
     const onScroll = () => {
-      setShow(window.scrollY > window.innerHeight * 0.2); // 👈 20%
+      setShow(window.scrollY > window.innerHeight * 0.2);
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -45,13 +45,15 @@ export default function FixedContactBar() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 20 }}
           transition={{ duration: 0.5, ease: smoothEase }}
-          className="fixed right-3 bottom-15 z-50 hidden md:flex flex-col gap-4"
+          className="fixed right-4 bottom-24 z-50 hidden md:flex flex-col gap-4"
         >
           {contacts.map((Item, i) => (
             <a
               key={i}
               href={Item.href}
               aria-label={Item.label}
+              target="_blank"
+              rel="noopener noreferrer"
               className="
                 group
                 w-8 h-8

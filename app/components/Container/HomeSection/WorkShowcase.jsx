@@ -4,12 +4,9 @@ import { useState, useMemo } from "react";
 import MainLayout from "@/app/common/MainLayout";
 import Image from "next/image";
 import ArrowSvg from "@/app/assets/arrow.svg";
-import project1 from "@/app/assets/project1.svg";
-import project2 from "@/app/assets/project2.svg";
-import project3 from "@/app/assets/project3.svg";
-import project4 from "@/app/assets/project4.svg";
-import project5 from "@/app/assets/project5.svg";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import Link from "next/link";
+import { works } from "@/app/utils/mockdata";
 
 const categories = [
   "All",
@@ -17,52 +14,8 @@ const categories = [
   "Mobile App",
   "SMM",
   "PPC",
-  "Print",
   "SEO",
   "Branding",
-];
-
-const works = [
-  {
-    id: 1,
-    title: "Real Estate App for Success of GJ Properties",
-    category: "Mobile App",
-    image: project1,
-    description:
-      "We built a mobile app for GJ Properties, blending tradition with Cognitive Design, AI-enhanced multilingual support, and predictive UX.",
-  },
-  {
-    id: 2,
-    title: "Redefined Event Experiences for FDI Sharjah",
-    category: "Mobile App",
-    image: project2,
-    description:
-      "An immersive event app with AI-generated layouts, behavioral analytics, and smart UX that increased engagement by 108%.",
-  },
-  {
-    id: 3,
-    title: "Jino – A Leap for Automotive",
-    category: "Website",
-    image: project3,
-    description:
-      "A modern automotive platform offering seamless service discovery, booking, and intelligent user flows.",
-  },
-  {
-    id: 4,
-    title: "Brand Identity for New Startup",
-    category: "Branding",
-    image: project4,
-    description:
-      "Complete brand identity including logo, typography, color systems, and brand guidelines.",
-  },
-  {
-    id: 5,
-    title: "SEO Growth Campaign",
-    category: "SEO",
-    image: project5,
-    description:
-      "Organic growth-focused SEO campaign that improved rankings, CTR, and conversions.",
-  },
 ];
 
 const WorkShowcase = () => {
@@ -123,25 +76,32 @@ const WorkShowcase = () => {
         "
       >
         {filteredWorks?.map((item, idx) => (
-          <motion.div
+          <Link
             key={item.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: idx * 0.05 }}
-            className="
-              group
-              min-w-[280px]
-              sm:min-w-0
-            "
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
           >
-            <div className="relative overflow-hidden rounded-3xl">
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={600}
-                height={800}
-                priority={idx === 0}
-                className="
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: idx * 0.05 }}
+              className="
+        group
+        min-w-[280px]
+        sm:min-w-0
+        cursor-pointer
+      "
+            >
+              <div className="relative overflow-hidden rounded-3xl">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={600}
+                  height={800}
+                  priority={idx === 0}
+                  className="
                   w-full
                   h-[260px]
                   sm:h-[340px]
@@ -150,10 +110,10 @@ const WorkShowcase = () => {
                   transition-transform duration-700
                   group-hover:scale-105
                 "
-              />
+                />
 
-              <div
-                className="
+                <div
+                  className="
                   absolute inset-0
                   bg-linear-to-t
                   from-black/90
@@ -163,39 +123,40 @@ const WorkShowcase = () => {
                   group-hover:opacity-100
                   transition-opacity duration-500
                 "
-              />
+                />
 
-              <div
-                className="
+                <div
+                  className="
                   absolute bottom-6 left-6 right-6
                   opacity-0 translate-y-4
                   group-hover:opacity-100 group-hover:translate-y-0
                   transition-all duration-500
                 "
-              >
-                <p className="text-sm leading-relaxed text-white/90">
-                  {item.description}
-                </p>
+                >
+                  <p className="text-sm leading-relaxed text-white/90">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="mt-6 space-y-3">
-              <h3 className="text-2xl font-medium text-white leading-snug line-clamp-2">
-                {item.title}
-              </h3>
+              <div className="mt-6 space-y-3">
+                <h3 className="text-2xl font-medium text-white leading-snug line-clamp-2">
+                  {item.title}
+                </h3>
 
-              <MdOutlineArrowOutward
-                size={28}
-                className="
+                <MdOutlineArrowOutward
+                  size={28}
+                  className="
                   opacity-0
                   group-hover:opacity-100
                   group-hover:translate-x-1
                   transition-all duration-300
                   text-white
                 "
-              />
-            </div>
-          </motion.div>
+                />
+              </div>
+            </motion.div>
+          </Link>
         ))}
       </div>
     </MainLayout>
