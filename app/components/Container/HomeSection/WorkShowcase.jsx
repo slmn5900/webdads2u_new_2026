@@ -20,10 +20,11 @@ const categories = [
 
 const WorkShowcase = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+
   const filteredWorks = useMemo(() => {
     if (activeCategory === "All") return works;
     return works.filter((item) => item.category === activeCategory);
-  }, [activeCategory]);
+  }, [activeCategory, works]);
 
   return (
     <MainLayout

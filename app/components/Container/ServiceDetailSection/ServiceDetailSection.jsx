@@ -7,10 +7,11 @@ import OurProcessSection from "./OurProcessSection";
 import ServiceDetailsHero from "./ServiceDetailsHero";
 import StickyServicesSection from "./StickyServicesSection";
 
-const ServiceDetailSection = ({ slug }) => {
+const ServiceDetailSection = () => {
+
   return (
     <>
-      <ServiceDetailsHero slug={slug} />
+      <ServiceDetailsHero  />
       <StickyServicesSection />
       <OurProcessSection />
       <PartnersRecognition />

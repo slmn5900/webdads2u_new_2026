@@ -9,27 +9,17 @@ const cards = [
     image: "https://images.unsplash.com/photo-1501183638710-841dd1904471",
     stats: [
       { value: "10+", label: "Years of experience in digital marketing." },
-      { value: "85+", label: "Clients across healthcare industry." },
+      { value: "5+", label: "Clients across healthcare industry." },
     ],
     cases: ["CMC", "Health+", "Pharma"],
-  },
-  {
-    title: "Real Estate",
-    subtitle: "We Build High-Converting Digital Experiences",
-    image: "https://images.unsplash.com/photo-1501183638710-841dd1904471",
-    stats: [
-      { value: "12+", label: "Years of experience in web development." },
-      { value: "90+", label: "Clients across real estate sector." },
-    ],
-    cases: ["Avalon", "Emaar", "Sobha"],
   },
   {
     title: "E-Commerce",
     subtitle: "Scaling Brands with Smart Commerce Solutions",
     image: "https://images.unsplash.com/photo-1519337265831-281ec6cc8514",
     stats: [
-      { value: "8+", label: "Years of e-commerce expertise." },
-      { value: "150+", label: "Online stores launched." },
+      { value: "10+", label: "Years of e-commerce expertise." },
+      { value: "5+", label: "Online stores launched." },
     ],
     cases: ["ShopX", "Brandify", "Cartly"],
   },
@@ -38,8 +28,8 @@ const cards = [
     subtitle: "Technology That Empowers Learning",
     image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f",
     stats: [
-      { value: "6+", label: "Years in ed-tech solutions." },
-      { value: "60+", label: "Institutions empowered." },
+      { value: "10+", label: "Years in ed-tech solutions." },
+      { value: "3+", label: "Institutions empowered." },
     ],
     cases: ["EduPro", "LearnX", "Campus"],
   },
@@ -84,7 +74,7 @@ export default function IndustryStackedCards() {
                 absolute
                 w-[90vw] max-w-7xl
                 h-[70vh]
-                rounded-[33px]
+                rounded-[25px]
                 bg-[#3f4043]
                 p-10 md:p-14
                 grid grid-cols-1 lg:grid-cols-3
@@ -129,10 +119,6 @@ export default function IndustryStackedCards() {
                   ))}
                 </div>
                 <div className="mt-12">
-                  <p className="flex items-center gap-2 text-sm mb-4">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full" />
-                    See Case Studies
-                  </p>
                   <div className="flex gap-4">
                     {card.cases.map((c, i) => (
                       <div

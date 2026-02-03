@@ -33,7 +33,7 @@ const AboutHeader = () => {
           <div />
           <div className="text-sm md:text-sm text-white/80 leading-relaxed max-w-sm">
             <p>
-              With 13+ years of experience and 500+ clients served, we help
+              With 13+ years of experience and 100+ clients served, we help
               businesses build strong digital foundations through design,
               technology, and innovation. Our team delivers web, mobile, AI, and
               automation solutions that support real business growth across

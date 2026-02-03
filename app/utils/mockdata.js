@@ -197,6 +197,9 @@ export const serviceCategories = [
   },
 ];
 
+
+
+
 export const works = [
   {
     id: 1,
@@ -244,7 +247,7 @@ export const works = [
       "A clear and informative website designed to guide students through study-abroad options, application steps, and expert support.",
   },
   {
-    id: 5,
+    id: 6,
     title: "Mathioli Gita – Online Tamil Books & Audio Books Store",
     category: "Mobile App",
     image: project6,
@@ -253,6 +256,8 @@ export const works = [
       "Mathioli Gita offers a curated collection of Tamil books and audiobooks, bringing the words of Guru Pujyashri Mathioli Saraswathy to readers worldwide with inspiring spiritual and literary works.",
   },
 ];
+
+
 
 export const serviceContent = {
   "web-portal-development": {

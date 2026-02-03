@@ -5,6 +5,7 @@ import MainLayout from "@/app/common/MainLayout";
 import schedule from "@/app/assets/schedule.svg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const HeroSection = () => {
   const router = useRouter();
@@ -95,7 +96,7 @@ const HeroSection = () => {
                 />
               </span>
             </button>
-            <span className="text-xs underline capitalize">see our work</span>
+            <Link href={"/contact"} className="text-xs underline capitalize">see our work</Link>
           </div>
         </div>
       </MainLayout>

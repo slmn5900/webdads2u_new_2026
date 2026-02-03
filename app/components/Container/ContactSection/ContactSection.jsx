@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { MapPin, Phone } from "lucide-react";
 import moon from "@/app/assets/moon.webp";
 import { useState } from "react";
+import Notification from "@/app/common/Notification";
 
 const ContactSection = () => {
   const [form, setForm] = useState({
@@ -15,6 +16,29 @@ const ContactSection = () => {
     service: "",
     message: "",
   });
+
+  const [loading, setLoading] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async () => {
+    setLoading(true);
+    await new Promise((res) => setTimeout(res, 1500));
+    console.log(form);
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+    });
+
+    setLoading(false);
+    setShowNotification(true);
+  };
 
   return (
     <>
@@ -30,7 +54,7 @@ const ContactSection = () => {
               <span className="w-2 h-2 rounded-full bg-purple-500 text-xs font-medium" />
               <p className="text-white/70">Contact Us</p>
             </div>
-            <h1 className="text-white text-4xl  font-medium leading-12 mb-6">
+            <h1 className="text-white text-4xl font-medium leading-12 mb-6">
               Grow Your Business With <br />
               Our Expertise.
             </h1>
@@ -46,6 +70,7 @@ const ContactSection = () => {
           <div />
         </div>
       </MainLayout>
+
       <MainLayout className="relative w-full min-h-screen flex items-center bg-cover bg-center px-3 md:px-20 bg-black">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center w-full">
           <div>
@@ -62,28 +87,44 @@ const ContactSection = () => {
               Lets Get Started
             </button>
           </div>
+
           <div className="relative w-full">
             <div className="absolute -inset-1 rounded-3xl bg-linear-to-r from-purple-600 to-pink-600 blur-xl opacity-40" />
             <div className="relative rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 p-8 space-y-6 shadow-2xl">
               <h2 className="text-2xl font-medium text-white">
                 Ready To Get Started?
               </h2>
+
               <div className="grid md:grid-cols-2 gap-4">
                 <input
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
                   placeholder="Name"
                   className="w-full rounded-xl bg-white/10 border border-white/20 px-4 py-3 text-white placeholder:text-white/60 outline-none focus:ring-2 focus:ring-purple-500"
                 />
+
                 <input
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
                   placeholder="Email"
                   className="w-full rounded-xl bg-white/10 border border-white/20 px-4 py-3 text-white placeholder:text-white/60 outline-none focus:ring-2 focus:ring-purple-500"
                 />
+
                 <input
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
                   placeholder="Phone"
                   className="w-full rounded-xl bg-white/10 border border-white/20 px-4 py-3 text-white placeholder:text-white/60 outline-none focus:ring-2 focus:ring-purple-500"
                 />
+
                 <select
+                  name="service"
+                  value={form.service}
+                  onChange={handleChange}
                   className="w-full rounded-xl bg-white/10 border border-white/20 px-4 py-3 text-white outline-none focus:ring-2 focus:ring-purple-500 transition"
-                  defaultValue=""
                 >
                   <option value="" disabled className="text-gray-500">
                     Select the service
@@ -109,30 +150,36 @@ const ContactSection = () => {
                 </select>
               </div>
               <textarea
+                name="message"
+                value={form.message}
+                onChange={handleChange}
                 rows={4}
                 placeholder="Message"
                 className="w-full rounded-xl bg-white/10 border border-white/20 px-4 py-3 text-white placeholder:text-white/60 outline-none focus:ring-2 focus:ring-purple-500 resize-none"
               />
-              <button className="w-full bg-linear-to-r from-purple-600 to-pink-500 py-3 rounded-xl text-white hover:scale-105 transition">
-                Submit
+              <button
+                onClick={handleSubmit}
+                disabled={loading}
+                className="w-full bg-linear-to-r from-purple-600 to-pink-500 py-3 rounded-xl text-white hover:scale-105 transition"
+              >
+                {loading ? "Sending..." : "Submit"}
               </button>
             </div>
           </div>
         </div>
       </MainLayout>
       <MainLayout className="relative w-full min-h-screen bg-black text-white overflow-hidden flex items-center px-3 md:px-20">
-        <div className=" grid lg:grid-cols-3 gap-10  items-center relative z-10">
+        <div className=" grid lg:grid-cols-3 gap-10 items-center relative z-10">
           <div className="hidden lg:block">
             <p className="text-gray-300 leading-relaxed text-xs">
-              Our team here drives forward-thinking solutions, ensuring
-              high-quality service and a deep understanding of local markets
+              Our team here drives forward-thinking solutions.
             </p>
           </div>
           <div className="flex justify-center">
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
-              className="relative w-[400px] h-[400px] lg:w-[900px] "
+              className="relative w-[400px] h-[400px] lg:w-[900px]"
             >
               <Image
                 src={moon}
@@ -148,21 +195,25 @@ const ContactSection = () => {
             <div className="flex items-start gap-3 text-gray-300 text-xs">
               <MapPin size={18} />
               <p>
-                FIRST FLOOR, 2ND PORTION, 36, Saraswathi Nagar Main Rd,
-                Saraswathi Nagar, Thirumalaiyoyal, Chennai, Tamil Nadu 600062
-                <br />
-                India
+                FIRST FLOOR, 2ND PORTION, 36, Saraswathi Nagar Main Rd, Chennai,
+                Tamil Nadu 600062
               </p>
             </div>
             <div className="flex items-center gap-3 text-gray-300 text-xs">
               <Phone size={18} />
-              <div>
-                <p>+91-88256 07550</p>
-              </div>
+              <p>+91-88256 07550</p>
             </div>
           </div>
         </div>
       </MainLayout>
+      {showNotification && (
+        <Notification
+          title="Thank You!"
+          message="Your form has been submitted successfully. Our team will contact you shortly."
+          phone="+91-88256 07550"
+          onClose={() => setShowNotification(false)}
+        />
+      )}
     </>
   );
 };

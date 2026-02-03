@@ -1,8 +1,6 @@
 "use client";
-
 import Image from "next/image";
 import detailsBanner from "@/app/assets/detailsbanne.webp";
-import { serviceContent } from "@/app/utils/mockdata";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -14,9 +12,7 @@ const fadeUp = {
   },
 };
 
-export default function ServiceDetailsHero({ slug }) {
-  const content = serviceContent[slug] || serviceContent.default;
-
+export default function ServiceDetailsHero({ serviceData }) {
   return (
     <section className="relative min-h-screen flex items-center text-white overflow-hidden">
       <Image
@@ -35,11 +31,15 @@ export default function ServiceDetailsHero({ slug }) {
       >
         <div className="flex items-center gap-2 mb-2">
           <span className="h-2 w-2 rounded-full bg-purple-500" />
-          <p className="text-sm tracking-widest capitalize">{content.tag}</p>
+          <p className="text-sm tracking-widest capitalize">
+            {serviceData?.title}
+          </p>
         </div>
 
-        <h1 className="text-4xl leading-13 mb-3">{content.title}</h1>
-        <p className="text-white max-w-xl">{content.description}</p>
+        <h1 className="text-4xl leading-13 mb-3">{serviceData?.subTitle}</h1>
+        <p className="text-white text-xs max-w-xl">
+          {serviceData?.description}
+        </p>
       </motion.div>
       <motion.div
         className="absolute right-20 top-1/2 -translate-y-1/2 w-[400px] bg-black/60 backdrop-blur-xl border border-white/20 rounded-3xl p-6"

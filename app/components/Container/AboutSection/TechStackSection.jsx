@@ -1,24 +1,22 @@
 "use client";
-
+import framework1 from "@/app/assets/framework1.svg";
+import framework2 from "@/app/assets/framework2.svg";
+import framework3 from "@/app/assets/framework3.svg";
+import framework4 from "@/app/assets/framework4.svg";
+import framework5 from "@/app/assets/framework5.svg";
+import framework6 from "@/app/assets/framework6.svg";
+import framework7 from "@/app/assets/framework7.svg";
 import { motion } from "framer-motion";
-import {
-  Atom,
-  Layers,
-  Code,
-  Braces,
-  Coffee,
-  Flame,
-  Rocket,
-} from "lucide-react";
+import Image from "next/image";
 
 const techs = [
-  { icon: Layers, color: "text-green-400" },
-  { icon: Code, color: "text-orange-500" },
-  { icon: Atom, color: "text-cyan-400" },
-  { icon: Braces, color: "text-purple-400" },
-  { icon: Coffee, color: "text-blue-400" },
-  { icon: Flame, color: "text-orange-400" },
-  { icon: Rocket, color: "text-white" },
+  { img: framework1 },
+  { img: framework2 },
+  { img: framework3 },
+  { img: framework4 },
+  { img: framework5 },
+  { img: framework6 },
+  { img: framework7 },
 ];
 
 const container = {
@@ -76,50 +74,50 @@ export default function TechStackSection() {
           gap-10
         "
       >
-        {techs.map((tech, index) => {
-          const Icon = tech.icon;
-          return (
+        {techs.map((tech, index) => (
+          <motion.div
+            key={index}
+            variants={item}
+            whileHover={{
+              scale: 1.18,
+              boxShadow: "0 0 160px rgba(80,180,255,0.55)",
+            }}
+            whileTap={{ scale: 0.96 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 18,
+            }}
+            className="
+      aspect-square
+      rounded-3xl
+      bg-linear-to-br from-white/10 via-white/5 to-white/0
+      backdrop-blur-xl
+      border border-white/10
+      flex items-center justify-center
+      relative overflow-hidden
+      cursor-pointer
+      origin-center
+    "
+          >
             <motion.div
-              key={index}
-              variants={item}
-              whileHover={{
-                scale: 1.18,
-                boxShadow: "0 0 160px rgba(80,180,255,0.55)",
-              }}
-              whileTap={{ scale: 0.96 }}
-              transition={{
-                type: "spring",
-                stiffness: 260,
-                damping: 18,
-              }}
+              initial={{ opacity: 0, scale: 0.85 }}
+              whileHover={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
               className="
-                aspect-square
-                rounded-3xl
-                bg-linear-to-br from-white/10 via-white/5 to-white/0
-                backdrop-blur-xl
-                border border-white/10
-                flex items-center justify-center
-                relative overflow-hidden
-                cursor-pointer
-                origin-center
-              "
-            >
-              <motion.div
-                initial={{ opacity: 0, scale: 0.85 }}
-                whileHover={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.35, ease: "easeOut" }}
-                className="
-                  absolute inset-0 rounded-3xl
-                  bg-white/5
-                  shadow-[inset_0_0_60px_rgba(80,180,255,0.35)]
-                "
-              />
-              <Icon
-                className={`relative z-10 w-14 h-14 md:w-16 md:h-16 ${tech.color}`}
-              />
-            </motion.div>
-          );
-        })}
+        absolute inset-0 rounded-3xl
+        bg-white/5
+        shadow-[inset_0_0_60px_rgba(80,180,255,0.35)]
+      "
+            />
+
+            <Image
+              src={tech.img}
+              alt="tech"
+              className="relative z-10 w-14 h-14 md:w-16 md:h-16 object-contain"
+            />
+          </motion.div>
+        ))}
       </motion.div>
     </section>
   );

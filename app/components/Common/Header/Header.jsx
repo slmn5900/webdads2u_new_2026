@@ -22,11 +22,11 @@ const servicesData = [
       "Wordpress Web Development",
       "ReactJS Web Development",
       "Php Web Development",
-      "Custom Web Development",
+      "Nextjs Development",
     ],
   },
   {
-    title: "SEO Services",
+    title: "Digital Marketing",
     children: [
       "Digital Marketing",
       "PPC Service",
@@ -170,7 +170,18 @@ export default function Header() {
     const slug = child.toLowerCase().replace(/&/g, "and").replace(/\s+/g, "-");
     setIsServicesHovered(false);
     setOpenService(null);
-    router.push(`/service/${slug}`);
+    router.push(`/${slug}`);
+  };
+
+  const goToMainService = (serviceTitle) => {
+    const slug = serviceTitle
+      .toLowerCase()
+      .replace(/&/g, "and")
+      .replace(/\s+/g, "-");
+
+    setIsServicesHovered(false);
+    setOpenService(null);
+    router.push(`/${slug}`);
   };
 
   return (
@@ -234,7 +245,8 @@ export default function Header() {
                             <div key={index}>
                               <button
                                 onMouseEnter={() => setOpenService(index)}
-                                className="flex items-center justify-between w-full text-white font-semibold mb-3"
+                                onClick={() => goToMainService(service.title)}
+                                className="flex items-center justify-between w-full text-white font-semibold mb-3 cursor-pointer hover:text-purple-400 transition"
                               >
                                 {service.title}
 
