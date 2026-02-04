@@ -1,6 +1,7 @@
 "use client";
 
-import { Facebook, Instagram, Youtube, Linkedin, Dribbble } from "lucide-react";
+import Link from "next/link";
+import { Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import Footerbottomimg from "@/app/assets/footerbottomimg.svg";
 
@@ -27,70 +28,41 @@ const Footer = () => {
       href: "https://www.youtube.com/webdads2u",
     },
   ];
+
   return (
     <footer className="relative overflow-hidden bg-[#1c1c1c] text-gray-400">
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12 pt-20 pb-40">
+        {/* Logo */}
         <div className="relative pb-10 overflow-hidden">
-          <div className="absolute inset-0 bg-radial from-white/5 via-transparent to-transparent pointer-events-none" />
           <div className="relative flex flex-col items-center text-center">
             <motion.div
               className="text-white"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <p className="text-lg tracking-wide opacity-80">Digital</p>
-              <h2 className="text-6xl font-bold tracking-tight">
+              <p className="text-lg opacity-80">Digital</p>
+              <h2 className="text-6xl font-bold">
                 We<span>b</span>dads
               </h2>
             </motion.div>
-
             <div className="flex items-center w-full mt-6 gap-8">
-              <motion.span
-                className="flex-1 h-[3px]"
-                style={{
-                  background:
-                    "linear-gradient(90deg, transparent 0%, #a855f7 50%, transparent 100%)",
-                  backgroundSize: "200% 100%",
-                }}
-                animate={{ backgroundPosition: ["0% 50%", "100% 50%"] }}
-                transition={{
-                  duration: 3,
-                  ease: "linear",
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
-              />
+              <span className="flex-1 h-[3px] bg-linear-to-r from-transparent via-purple-500 to-transparent" />
               <div className="flex gap-6 text-white">
-                {socials?.map((item, i) => (
+                {socials.map((item, i) => (
                   <a
                     key={i}
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={item.name}
                     className="hover:opacity-70 transition"
                   >
-                    <item.icon className="w-5 h-5 cursor-pointer" />
+                    <item.icon className="w-5 h-5" />
                   </a>
                 ))}
               </div>
-              <motion.span
-                className="flex-1 h-[3px]"
-                style={{
-                  background:
-                    "linear-gradient(90deg, transparent 0%, #a855f7 50%, transparent 100%)",
-                  backgroundSize: "200% 100%",
-                }}
-                animate={{ backgroundPosition: ["100% 50%", "0% 50%"] }}
-                transition={{
-                  duration: 3,
-                  ease: "linear",
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
-              />
+              <span className="flex-1 h-[3px] bg-linear-to-r from-transparent via-purple-500 to-transparent" />
             </div>
           </div>
         </div>
@@ -98,19 +70,21 @@ const Footer = () => {
           <div>
             <ul className="space-y-4 text-sm">
               {[
-                "Work",
-                "Contact Us",
-                "Career",
-                "Blog",
-                "Privacy Policy",
-                "Terms & Conditions",
-                "Refund Policy",
+                { label: "Work", path: "/work" },
+                { label: "Contact Us", path: "/contact" },
+                { label: "Career", path: "/career" },
+                { label: "Blog", path: "/blog" },
+                { label: "Privacy Policy", path: "/privacy-policy" },
+                { label: "Terms & Conditions", path: "/terms-conditions" },
+                { label: "Refund Policy", path: "/refund-policy" },
               ].map((item) => (
-                <li
-                  key={item}
-                  className="hover:text-white transition cursor-pointer"
-                >
-                  {item}
+                <li key={item.label}>
+                  <Link
+                    href={item.path}
+                    className="hover:text-white transition"
+                  >
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -121,14 +95,19 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-sm">
               {[
-                "Web Portal Development",
-                "WordPress Web Development",
-                "ReactJs Web Development",
-                "PHP Web Development",
-                "Custom Web Development",
-              ].map((item) => (
-                <li key={item} className="hover:text-white transition">
-                  {item}
+                "web-portal-development",
+                "wordpress-development",
+                "reactjs-development",
+                "php-development",
+                "custom-web-development",
+              ].map((slug) => (
+                <li key={slug}>
+                  <Link
+                    href={`/${slug}`}
+                    className="hover:text-white transition capitalize"
+                  >
+                    {slug.replaceAll("-", " ")}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -139,16 +118,21 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-sm">
               {[
-                "Digital Marketing",
-                "PPC Service",
-                "E-Commerce SEO Service",
-                "Local SEO Service",
-                "Off Page SEO",
-                "Link Building Service",
-                "Content Writing Service",
-              ].map((item) => (
-                <li key={item} className="hover:text-white transition">
-                  {item}
+                "digital-marketing",
+                "ppc-service",
+                "ecommerce-seo",
+                "local-seo",
+                "off-page-seo",
+                "link-building",
+                "content-writing",
+              ].map((slug) => (
+                <li key={slug}>
+                  <Link
+                    href={`/${slug}`}
+                    className="hover:text-white transition capitalize"
+                  >
+                    {slug.replaceAll("-", " ")}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -159,14 +143,19 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-sm">
               {[
-                "iOS App Development",
-                "Android App Development",
-                "Flutter App Development",
-                "React Native App Development",
-                "Mobile App UI/UX Design",
-              ].map((item) => (
-                <li key={item} className="hover:text-white transition">
-                  {item}
+                "ios-app-development",
+                "android-app-development",
+                "flutter-app-development",
+                "react-native-development",
+                "mobile-ui-ux-design",
+              ].map((slug) => (
+                <li key={slug}>
+                  <Link
+                    href={`/${slug}`}
+                    className="hover:text-white transition capitalize"
+                  >
+                    {slug.replaceAll("-", " ")}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -181,19 +170,15 @@ const Footer = () => {
           className="w-full opacity-25 translate-y-4 md:translate-y-8"
         />
       </div>
-
       <div className="relative z-20 border-t border-white/10 bg-linear-to-r from-[#0f0f14] via-[#14141c] to-[#0f0f14]">
         <div className="mx-auto max-w-7xl px-6 md:px-12 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/80">
           <div className="flex items-center gap-6">
-            <a href="/privacy-policy" className="hover:text-white transition">
-              Privacy Policy
-            </a>
+            <Link href="/privacy-policy">Privacy Policy</Link>
             <span className="h-4 w-px bg-white/30" />
-            <a href="/terms-conditions" className="hover:text-white transition">
-              Terms & Conditions
-            </a>
+            <Link href="/terms-conditions">Terms & Conditions</Link>
           </div>
-          <div className="text-white/80">© 2026. Webdads.</div>
+
+          <div>© 2026. Webdads.</div>
         </div>
       </div>
     </footer>

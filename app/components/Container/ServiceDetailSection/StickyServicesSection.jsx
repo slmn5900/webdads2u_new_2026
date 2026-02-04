@@ -11,7 +11,7 @@ export default function StickyServicesSection({ services, heading }) {
     <MainLayout className="relative min-h-screen bg-black text-white">
       <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-20 px-10 lg:px-20 py-32">
         <div className="sticky top-32 h-fit">
-          <h2 className="text-4xl lg:text-5xl leading-tight font-light">
+          <h2 className="text-4xl md:text-5xl  font-light">
             {heading}
           </h2>
         </div>

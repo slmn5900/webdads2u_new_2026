@@ -17,19 +17,18 @@ export default function StandOutSection({ title, items }) {
         className="pointer-events-none"
       />
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="h-[420px] w-[420px] rounded-full bg-purple-600/30 blur-[160px]" />
+        <div className="h-[420px] w-[400px] rounded-full bg-purple-600/30 blur-[160px]" />
       </div>
       <div className="relative z-10">
-        <h2 className="text-4xl lg:text-5xl font-light mb-16 px-10 lg:px-20">
+        <h2 className="text-4xl md:text-5xl font-light mb-10 px-10 lg:px-20">
           {title}
         </h2>
-
         <div className="flex gap-8 overflow-x-auto scrollbar-hide">
           {items?.map((item, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.03 }}
-              className="min-w-[300px] lg:min-w-[360px] bg-white/5 border border-white/20 rounded-3xl p-8 relative backdrop-blur"
+              className="min-w-[300px] lg:min-w-[380px] bg-white/5 border border-white/20 rounded-3xl p-8 relative backdrop-blur"
             >
               <h3 className="text-md mb-4 font-medium">{item.title}</h3>
               <p className="text-white/70 leading-relaxed text-sm">

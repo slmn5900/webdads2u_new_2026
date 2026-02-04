@@ -231,99 +231,147 @@ export const webPortalDevelopment = {
 };
 
 export const webDevelopment = {
-  title: "Web Development",
-  subTitle: "Web Development Leaders in INDIA",
+  title: "Web development company ",
+  subTitle: "Your Partner for Professional Web Development in the Chennai",
 
   description:
-    "At Digital Gravity, we don't just build websites; we craft digital experiences that leave a lasting impression. As a leading web development agency in Dubai, we have successfully designed and developed over 300 websites, catering to diverse industries both locally and globally.",
+    "We don’t just create websites — we build digital experiences that connect brands with people. A portfolio of 200+ websites showcases our work as a trusted web development company serving businesses across diverse industries.",
 
   servicesData: [
     {
-      title: "Custom Website Development",
+      title: "WordPress Website Development ",
       description:
-        "Tailored websites built with modern frameworks for performance, scalability, and security.",
+        "Webdads2u Pvt. Ltd. is a leading WordPress development company in Chennai, delivering custom, secure, and high-performance WordPress websites. We specialize in theme customization, plugin development, and tailored solutions that match your business goals. Our focus on speed, SEO, and smooth user experience ensures your website performs well, stays reliable, and supports long-term growth.",
       link: "/web-development/custom",
     },
     {
-      title: "Corporate & Business Websites",
+      title: "React JS Website Development ",
       description:
-        "Professional websites that strengthen brand presence and drive conversions.",
+        "Webdads2u Pvt. Ltd. is a trusted ReactJS development company in Chennai, creating fast, scalable, and high-performance web applications. We build single-page apps, dashboards, and custom solutions with reusable components and smooth navigation. Our focus on clean architecture and flawless performance helps businesses deliver seamless digital experiences that scale with demand.",
       link: "/web-development/business",
     },
     {
-      title: "E-Commerce Development",
+      title: "Next.js Website Development",
       description:
-        "Scalable online stores with secure payments and seamless user experience.",
+        "Webdads2u Pvt. Ltd. develops Next.js websites that are fast, SEO-friendly, and built for high performance. Our team creates scalable applications using server-side rendering, modern UI frameworks, and clean architecture. We design Next.js solutions that load faster, run smoother, and offer a seamless browsing experience, helping businesses build strong and reliable digital platforms.",
       link: "/web-development/ecommerce",
     },
     {
-      title: "CMS Development",
+      title: "Web Portal Development",
       description:
-        "Easy-to-manage CMS solutions including WordPress and headless platforms.",
+        "Webdads2u Pvt. Ltd. develops custom web portals that centralize information, automate workflows, and improve business efficiency. Whether it’s customer management, employee access, or operational tools, our portals are designed for clarity, control, and scalability. We build systems that streamline processes and support smooth day-to-day operations as your business grows.",
       link: "/web-development/cms",
     },
+  ],
+  faqData: [
     {
-      title: "Web App Development",
-      description:
-        "Feature-rich web applications with modern UI and robust backend integration.",
-      link: "/web-development/web-apps",
+      q: "What makes WebDads2U a trusted website development company in Chennai?",
+      a: "WebDads2U focuses on simple planning, clean layouts and smooth development. We understand what your business needs and create websites that load fast, work well on all devices and support real user actions. This approach makes us a dependable partner for long-term digital growth.",
     },
     {
-      title: "Maintenance & Support",
-      description:
-        "Continuous monitoring, updates, and performance optimization.",
-      link: "/web-development/support",
+      q: "Do you handle complete website creation from start to finish?",
+      a: "Yes. As a website creation company in Chennai, we manage everything from planning, design, development and testing to launch and support. This helps you avoid confusion and ensures your project moves in one clear direction.",
+    },
+    {
+      q: "How does your team ensure the website is easy for users?",
+      a: "We study what your users want, plan simple paths and design clear pages. Our goal is to make your website easy to understand from the first click. Clean design and smooth flow help users stay longer and act faster.",
+    },
+    {
+      q: "What makes WebDads2U different from other website builders in Chennai?",
+      a: "We focus on clarity and function over noise. Every part of the website has a clear purpose, simple wording and easy navigation. This helps businesses communicate better and build trust with visitors.",
+    },
+    {
+      q: "Do you offer support after the website goes live?",
+      a: "Yes. We monitor your website, fix issues quickly and help with updates. Our ongoing support keeps your website safe, fresh and ready for new needs as your business grows.",
+    },
+    {
+      q: "Why do clients see WebDads2U as one of the best website developers in Chennai?",
+      a: "Clients choose us because we build websites that look clean, load quickly and stay stable. Our process is easy to follow, communication is simple and every project is handled with care from beginning to end.",
+    },
+    {
+      q: "How long does a website project usually take?",
+      a: "The time depends on how many pages you need and how complex the features are. Simple websites can be completed quickly, while bigger ones need more planning and testing. Clear communication helps speed up the process.",
+    },
+    {
+      q: "What should I prepare before starting website creation in Chennai?",
+      a: "It’s helpful to know your goals, target customers and the main message you want to share. You don’t need technical knowledge—just a clear idea of what you want your website to achieve.",
+    },
+    {
+      q: "Can a website development agency in Chennai help my business grow?",
+      a: "Yes. A good agency builds websites that communicate clearly, look professional and guide users to take action. This improves engagement, increases trust and helps your business grow online.",
+    },
+    {
+      q: "Are web developers in Chennai experienced with modern tools?",
+      a: "Yes. Many developers here work with updated technology and follow current design standards. This helps you get a website that is fast, clean and ready for future changes.",
+    },
+    {
+      q: "What is the benefit of choosing the best website development company in Chennai?",
+      a: "You get strong planning, clean design, safe development and steady support. This gives your business a website that is easy to manage and helps build a strong online presence.",
+    },
+    {
+      q: "How do I choose the best web development company in Chennai?",
+      a: "Look for a team that communicates clearly, shows real work examples and explains every step simply. Choose a company that focuses on user needs, fast loading, clean structure and long-term support.",
     },
   ],
 
   standOutData: [
     {
-      title: "Modern Web Architecture",
+      title: "Built With a Clear Website Purpose",
       description:
-        "We use cutting-edge frameworks and scalable architectures to future-proof your websites.",
+        "We define one clear goal for your website and plan pages that guide visitors in the right direction.",
     },
     {
-      title: "SEO & Performance Focused",
+      title: "Simple Structure That Guides Visitors Easily",
       description:
-        "Every website is optimized for speed, search visibility, and Core Web Vitals.",
+        "We create clean layouts that help users find information quickly without confusion.",
     },
     {
-      title: "Secure Development",
+      title: "Designs That Communicate Without Extra Words",
       description:
-        "Best-in-class security practices to protect your data and users.",
+        "Clear design, readable text, and simple visuals help visitors understand your message instantly.",
     },
     {
-      title: "Result-Driven Approach",
-      description: "We build websites that convert visitors into customers.",
+      title: "Smooth Build With Reliable Website Performance",
+      description:
+        "Your website is built for speed, stability, and smooth use across all devices.",
+    },
+    {
+      title: " Careful Testing Before Your Website Goes Live",
+      description:
+        "We test your website across devices and browsers to ensure everything works smoothly.",
+    },
+    {
+      title: "Ongoing Help to Keep Your Website Growing",
+      description:
+        "We provide continuous support to keep your website updated, secure, and improving.",
     },
   ],
 
   processData: {
     subtitle: "Our Process",
-    title: "Elevate Your Web Experience with Our Seamless Process",
+    title: "A Step-by-Step Approach to Better Websites ",
 
     description:
-      "Our process involves in-depth business analysis, documenting specifications, creating wireframes, and obtaining your approval before moving forward. Our seasoned web experts guide you through every step of the journey.",
-
+      "A structured workflow keeps every project clear and controlled. Each phase connects smoothly, helping ideas turn into a well-built website without confusion or delays. This approach maintains quality, improves coordination, and ensures the final result meets both business and user expectations.",
     steps: [
       {
         title: "Planning",
         icon: "planning",
         points: [
-          "Business Analysis",
-          "Document Specifications",
-          "Preparing Wireframes",
-          "Getting Client Approval",
+          "Understanding Business Goals",
+          "Defining Website Requirements",
+          "Creating Page Structure",
+          "Approval Before Execution",
         ],
       },
       {
         title: "Development",
         icon: "development",
         points: [
-          "Coding",
-          "Mockup & Page Layout Creation",
-          "Review",
-          "Approval Cycle",
+          "Writing Clean Code",
+          "Building Page Layouts",
+          "Internal Reviews",
+          "Client Review Cycle",
         ],
       },
       {
@@ -331,15 +379,20 @@ export const webDevelopment = {
         icon: "testing",
         points: [
           "Preparing Test Cases",
-          "Quality Assurance",
-          "Bug Fixing",
-          "Final Review",
+          "Checking Functionality",
+          "Quality  Fixing",
+          "Final Confirmation",
         ],
       },
       {
         title: "Deployment",
         icon: "deployment",
-        points: ["Launch", "Monitoring", "Support & Maintenance"],
+        points: [
+          "Website Launch",
+          "Performance Tracking",
+          "Ongoing Updates",
+          "Continuous Support",
+        ],
       },
     ],
   },
@@ -576,120 +629,190 @@ export const reactDevelopment = {
 };
 
 export const digitalMarketing = {
-  title: "Digital Marketing",
-  subTitle: "Driving Growth Through Data-Driven Digital Strategies",
-
+  title: "Digital Marketing company ",
+  subTitle: "Making Your Brand Easier to Find Online",
   description:
-    "We help businesses grow online with result-oriented digital marketing strategies. From SEO and paid campaigns to social media and content marketing, our digital marketing services are designed to increase visibility, attract qualified leads, and convert traffic into loyal customers.",
+    "We are a creative digital marketing agency helping brands attract the right audience, build strong engagement, and convert interest into long-term customers.",
 
   servicesData: [
     {
-      title: "Search Engine Optimization (SEO)",
+      title: "SEO Services",
       description:
-        "On-page, off-page, and technical SEO to improve rankings, organic traffic, and long-term visibility.",
+        "Improve search rankings, fix technical issues, and grow organic traffic. Our SEO services drive qualified leads and long-term visibility without relying on ads.",
       link: "/digital-marketing/seo",
     },
     {
-      title: "Pay-Per-Click Advertising (PPC)",
+      title: "Local SEO Services",
       description:
-        "High-converting Google Ads and paid campaigns optimized for maximum ROI and lead generation.",
+        "Appear in “near me” searches, Google Maps, and local listings. We optimize your Google Business Profile, location pages, and citations to bring nearby customers ready to buy.",
+      link: "/digital-marketing/local-seo",
+    },
+    {
+      title: "Off-Page SEO",
+      description:
+        "Build online authority through strategic mentions, citations, and brand signals. Strengthen credibility and increase organic traffic with proven off-page SEO methods.",
+      link: "/digital-marketing/off-page-seo",
+    },
+    {
+      title: "Link Building Services",
+      description:
+        "Earn high-quality, relevant backlinks from authoritative websites to improve domain strength, boost rankings, and support long-term SEO stability.",
+      link: "/digital-marketing/link-building",
+    },
+    {
+      title: "Content Marketing Services",
+      description:
+        "SEO-focused blogs and landing pages that educate users, match search intent, build brand trust, and increase conversions across all digital touchpoints.",
+      link: "/digital-marketing/content",
+    },
+    {
+      title: "PPC Services",
+      description:
+        "Instant visibility with search ads, display campaigns, and remarketing. We optimize targeting and ad spend so every rupee delivers maximum ROI.",
       link: "/digital-marketing/ppc",
+    },
+    {
+      title: "Performance Marketing",
+      description:
+        "Results-driven campaigns focused on leads, sales, and revenue using real-time tracking, audience insights, and continuous optimization.",
+      link: "/digital-marketing/performance-marketing",
     },
     {
       title: "Social Media Marketing",
       description:
-        "Build brand awareness and engagement across Facebook, Instagram, LinkedIn, and more.",
+        "Grow your brand on Instagram, Facebook, LinkedIn, and more with engaging content and targeted Meta Ads that convert followers into real customers.",
       link: "/digital-marketing/social-media",
-    },
-    {
-      title: "Content Marketing",
-      description:
-        "Strategic blogs, creatives, and content campaigns that attract, educate, and convert audiences.",
-      link: "/digital-marketing/content",
-    },
-    {
-      title: "Email Marketing & Automation",
-      description:
-        "Personalized email campaigns and automation workflows to nurture leads and boost retention.",
-      link: "/digital-marketing/email",
-    },
-    {
-      title: "Analytics & Conversion Optimization",
-      description:
-        "Track performance, optimize funnels, and improve conversions using data-driven insights.",
-      link: "/digital-marketing/analytics",
     },
   ],
 
+  faqData: [
+    {
+      q: "How does WebDads2U help my business grow online?",
+      a: "WebDads2U studies your business needs and creates a simple plan to help you reach more people online. We focus on clear steps, clean content, and regular updates to increase visibility, enquiries, and overall online results.",
+    },
+    {
+      q: "What makes WebDads2U different from other digital marketing companies?",
+      a: "We follow a friendly and easy process with simple reports, fast support, and clear explanations. Our goal is stress-free marketing that delivers real growth using methods suited to your business size and audience.",
+    },
+    {
+      q: "Does WebDads2U offer digital marketing services for small businesses?",
+      a: "Yes. Many small businesses choose us because we use simple, effective methods. We avoid complicated plans and focus on what brings results, guiding you step by step for steady growth.",
+    },
+    {
+      q: "Will WebDads2U manage all my online work?",
+      a: "Yes. We manage campaigns, content, reports, and improvements from one place, so you can focus on your business while your digital work runs smoothly every day.",
+    },
+    {
+      q: "Can WebDads2U improve my brand image online?",
+      a: "Yes. We create neat designs, clear posts, and strong messaging that make your brand look professional. This builds trust faster and encourages customers to contact you more often.",
+    },
+    {
+      q: "How often does WebDads2U optimise my online performance?",
+      a: "We review your data every month and make small updates to improve reach, clicks, and engagement. This ongoing optimisation keeps your business active and ready for new opportunities.",
+    },
+    {
+      q: "What does a digital marketing agency do?",
+      a: "A digital marketing agency helps businesses grow online using SEO, paid ads, content, branding, and social media to increase visibility, traffic, and enquiries.",
+    },
+    {
+      q: "Why is hiring a digital marketing consultant useful?",
+      a: "A consultant guides you with the right plans, helps avoid mistakes, checks what works, and suggests better ideas for steady improvement.",
+    },
+    {
+      q: "How do digital marketing services help my business?",
+      a: "These services help your business appear in more online places, bringing more visitors, building trust, and increasing chances of gaining new customers.",
+    },
+    {
+      q: "What is the difference between SEO and online marketing?",
+      a: "SEO improves visibility in search results, while online marketing includes ads, social media, and content. Both work together to grow your business.",
+    },
+    {
+      q: "How long does digital marketing take to show results?",
+      a: "Some methods bring quick results, while others take time. You may see improvements within weeks, with stronger growth in a few months through regular updates.",
+    },
+    {
+      q: "Do digital marketing companies work for all types of businesses?",
+      a: "Yes. Any business wanting more visibility, enquiries, and online trust can benefit from digital marketing, including small, medium, and large brands.",
+    },
+  ],
   standOutData: [
     {
-      title: "ROI-Focused Strategies",
+      title: "Helping Your Business Gain Online Reach",
       description:
-        "Every campaign is designed to maximize conversions and measurable business growth.",
+        "Increase visibility and engagement naturally through SEO, ads, and content improvements that bring your brand in front of the right audience.",
     },
     {
-      title: "Multi-Channel Marketing",
+      title: "Building a Growth Strategy That Fits Your Goals",
       description:
-        "Integrated SEO, paid ads, social media, and content for consistent brand presence.",
+        "We analyse your business and audience to create focused digital plans that avoid waste and deliver steady, measurable growth.",
     },
     {
-      title: "Data-Driven Decisions",
+      title: "Content That Communicates Your Value Clearly",
       description:
-        "Advanced analytics and reporting to continuously optimize performance.",
+        "Simple, clear content helps users understand your offer faster, stay longer, and respond better to your message.",
     },
     {
-      title: "Transparent Reporting",
+      title: "Strengthens Your Brand Identity",
       description:
-        "Clear monthly reports with actionable insights and progress tracking.",
+        "Clean visuals and consistent messaging build trust, strengthen credibility, and help your brand stand out online.",
+    },
+    {
+      title: "Making Your Workflow Faster",
+      description:
+        "Organised processes, clear updates, and simple reports save time while your marketing runs smoothly.",
+    },
+    {
+      title: "Faster Work With a Smooth Online Process",
+      description:
+        "Regular data checks and small optimisations keep campaigns performing strongly and consistently.",
     },
   ],
 
   processData: {
     subtitle: "Our Process",
-    title: "Grow Your Brand with Our Proven Digital Marketing Process",
-
+    title: "Our Digital Marketing Process",
     description:
-      "Our digital marketing process begins with understanding your business goals, audience, and competitors. We create tailored strategies, execute campaigns, track performance, and continuously optimize for better results.",
+      "Our digital marketing process is built to keep work clear, planned, and measurable. Each stage is handled step by step to improve visibility, engagement, and performance. This structured approach helps brands grow strong without confusion or wasted effort.",
 
     steps: [
       {
-        title: "Research & Planning",
+        title: "Discovery & Workshops",
         icon: "planning",
         points: [
-          "Business & Market Analysis",
-          "Audience Research",
-          "Competitor Study",
-          "Strategy Roadmap",
+          "Understanding Business Goals",
+          "Identifying Target Audience",
+          "Defining Campaign Objectives",
+          "Finalising Scope of Work",
         ],
       },
       {
-        title: "Campaign Setup",
+        title: "Planning & Strategy",
         icon: "development",
         points: [
-          "Channel Selection",
-          "Creative Development",
-          "Ad & Content Setup",
-          "Tracking Configuration",
+          "Market & Industry Study",
+          "Competitor Analysis",
+          "Choosing Marketing Channels",
+          "Creating Growth Strategy",
         ],
       },
       {
-        title: "Execution & Optimization",
-        icon: "testing",
-        points: [
-          "Campaign Launch",
-          "Performance Monitoring",
-          "A/B Testing",
-          "Continuous Optimization",
-        ],
-      },
-      {
-        title: "Reporting & Scaling",
+        title: "Execution & Monitoring",
         icon: "deployment",
         points: [
-          "Monthly Reports",
-          "Insights & Improvements",
-          "Strategy Refinement",
-          "Growth Scaling",
+          "Campaign Setup & Launch",
+          "Content Scheduling",
+          "Performance Tracking",
+          "Regular Reporting & Improvements",
+        ],
+      },
+      {
+        title: "Testing & Optimisation",
+        icon: "testing",
+        points: [
+          "Testing Ad Variations",
+          "Content Performance Review",
+          "Audience Behaviour Analysis",
+          "Improving Campaign Results",
         ],
       },
     ],
@@ -732,6 +855,56 @@ export const mobileAppDevelopment = {
       title: "App Maintenance & Support",
       description: "Ongoing support, updates, and performance optimization.",
       link: "/mobile-app-development/support",
+    },
+  ],
+  faqData: [
+    {
+      q: "How does WebDads2U help my business grow online?",
+      a: "WebDads2U studies your business needs and creates a simple plan to help you reach more people online. We focus on clear steps, clean content, and regular updates to increase visibility, enquiries, and overall online results.",
+    },
+    {
+      q: "What makes WebDads2U different from other digital marketing companies?",
+      a: "We follow a friendly and easy process with simple reports, fast support, and clear explanations. Our goal is stress-free marketing that delivers real growth using methods suited to your business size and audience.",
+    },
+    {
+      q: "Does WebDads2U offer digital marketing services for small businesses?",
+      a: "Yes. Many small businesses choose us because we use simple, effective methods. We avoid complicated plans and focus on what brings results, guiding you step by step for steady growth.",
+    },
+    {
+      q: "Will WebDads2U manage all my online work?",
+      a: "Yes. We manage campaigns, content, reports, and improvements from one place, so you can focus on your business while your digital work runs smoothly every day.",
+    },
+    {
+      q: "Can WebDads2U improve my brand image online?",
+      a: "Yes. We create neat designs, clear posts, and strong messaging that make your brand look professional. This builds trust faster and encourages customers to contact you more often.",
+    },
+    {
+      q: "How often does WebDads2U optimise my online performance?",
+      a: "We review your data every month and make small updates to improve reach, clicks, and engagement. This ongoing optimisation keeps your business active and ready for new opportunities.",
+    },
+    {
+      q: "What does a digital marketing agency do?",
+      a: "A digital marketing agency helps businesses grow online using SEO, paid ads, content, branding, and social media to increase visibility, traffic, and enquiries.",
+    },
+    {
+      q: "Why is hiring a digital marketing consultant useful?",
+      a: "A consultant guides you with the right plans, helps avoid mistakes, checks what works, and suggests better ideas for steady improvement.",
+    },
+    {
+      q: "How do digital marketing services help my business?",
+      a: "These services help your business appear in more online places, bringing more visitors, building trust, and increasing chances of gaining new customers.",
+    },
+    {
+      q: "What is the difference between SEO and online marketing?",
+      a: "SEO improves visibility in search results, while online marketing includes ads, social media, and content. Both work together to grow your business.",
+    },
+    {
+      q: "How long does digital marketing take to show results?",
+      a: "Some methods bring quick results, while others take time. You may see improvements within weeks, with stronger growth in a few months through regular updates.",
+    },
+    {
+      q: "Do digital marketing companies work for all types of businesses?",
+      a: "Yes. Any business wanting more visibility, enquiries, and online trust can benefit from digital marketing, including small, medium, and large brands.",
     },
   ],
 
@@ -810,118 +983,172 @@ export const mobileAppDevelopment = {
 
 export const webDesign = {
   title: "Web Design",
-  subTitle: "Modern UI/UX Design That Converts Visitors into Customers",
-
+  subTitle: "Web Design That Makes Brands Stand Out",
   description:
-    "We craft visually stunning and user-focused website designs that enhance brand credibility and drive engagement. From wireframes to final UI, our web design services combine creativity with usability to deliver seamless digital experiences.",
+    "We design websites that look clear, feel smooth, and are easy to use. Every design focuses on your brand message, user comfort, and visual balance, helping visitors understand your business quickly and stay engaged longer.",
 
   servicesData: [
     {
-      title: "Custom Website Design",
+      title: "Dynamic Website Design",
       description:
-        "Unique, brand-aligned website designs tailored to your business goals.",
+        "Dynamic websites make updates simple and content flexible. We design websites that are easy to manage, well-organized, and ready to grow as your business needs change.",
       link: "/web-design/custom",
     },
     {
-      title: "UI/UX Design",
+      title: "Responsive Website Design",
       description:
-        "User-centered interfaces with intuitive navigation and conversion-focused layouts.",
+        "Landing pages focus on one clear action. We design pages that guide visitors smoothly, highlight key messages, and encourage better conversions through clean layouts and clear calls to action.",
       link: "/web-design/ui-ux",
     },
     {
-      title: "Responsive Design",
+      title: "E-Commerce Website Design",
       description:
-        "Pixel-perfect designs optimized for desktop, tablet, and mobile devices.",
+        "An e-commerce website should feel simple and reliable. We design online stores that make browsing easy, show products clearly, and support smooth checkout for confident buying.",
       link: "/web-design/responsive",
     },
     {
-      title: "Landing Page Design",
+      title: "Website Re-Design Services",
       description:
-        "High-converting landing pages built for marketing campaigns and lead generation.",
+        "Outdated websites need a fresh approach. We redesign layouts, visuals, and flow to improve clarity, usability, and performance while keeping your brand identity intact.",
       link: "/web-design/landing-pages",
     },
     {
-      title: "Website Redesign",
+      title: "UI UX Design",
       description:
-        "Modern redesigns that refresh outdated websites and improve user experience.",
+        "Good UI UX design improves how users interact with your website. We create simple, clear layouts that feel comfortable to use and help visitors find information quickly.",
       link: "/web-design/redesign",
-    },
-    {
-      title: "Design Support & Maintenance",
-      description:
-        "Ongoing design updates, enhancements, and visual optimization.",
-      link: "/web-design/support",
     },
   ],
 
   standOutData: [
     {
-      title: "User-First Design Approach",
-      description: "Every layout is crafted with real user behavior in mind.",
+      title: "Websites Designed With Clear Purpose",
+      description:
+        "Webdads2u plans every section with a clear goal. Pages explain your business properly, helping visitors understand your offerings quickly and browse without confusion.",
     },
     {
-      title: "Conversion-Focused UI",
+      title: "Clean Layouts That Feel Easy to Use",
       description:
-        "Designs optimized to turn visitors into leads and customers.",
+        "Simple layouts, good spacing, and clear navigation help visitors move through the website comfortably and stay engaged longer.",
     },
     {
-      title: "Modern Visual Standards",
+      title: "Strong First Look That Builds Confidence",
       description:
-        "Clean, professional aesthetics aligned with current design trends.",
+        "Professional and organized design creates a strong first impression, helping visitors trust your business within seconds.",
     },
     {
-      title: "Collaborative Design Process",
+      title: "Design That Works Across All Screens",
       description:
-        "We work closely with clients for feedback-driven design iterations.",
+        "Websites adjust smoothly on mobiles, tablets, and desktops, giving users a clear and consistent experience on every device.",
+    },
+    {
+      title: "Easy-to-Update Website Structure",
+      description:
+        "A flexible website structure makes future updates simple, allowing content changes and growth without design issues.",
+    },
+    {
+      title: "Ongoing Support After Website Launch",
+      description:
+        "Support continues after launch to manage updates, improvements, and guidance, keeping your website aligned with business needs.",
+    },
+  ],
+  webDesignFaqData: [
+    {
+      q: "How does Webdads2u approach website design projects?",
+      a: "Webdads2u begins by understanding your business, audience, and goals. The team plans the page structure and content flow first so the website explains your services clearly and guides visitors effectively.",
+    },
+    {
+      q: "Does Webdads2u offer complete web design services?",
+      a: "Yes. Webdads2u manages planning, design, development, and launch in one process. These web design services help prevent delays, clear up confusion, and keep consistent quality throughout the project.",
+    },
+    {
+      q: "What makes Webdads2u different from other website design companies?",
+      a: "Webdads2u prioritizes clarity and purpose rather than just visuals. The design team creates user-friendly websites that are easy to understand and built to support real business inquiries.",
+    },
+    {
+      q: "Does Webdads2u build custom websites or use templates?",
+      a: "Webdads2u develops custom designs based on business needs. Designers avoid pre-made layouts so every website has a unique structure, identity, and clear messaging.",
+    },
+    {
+      q: "Will Webdads2u ensure my website works on all devices?",
+      a: "Yes. Websites adapt smoothly to mobile, tablet, and desktop screens. Text stays readable, layouts remain balanced, and navigation is simple, giving visitors a consistent experience on any device.",
+    },
+    {
+      q: "What kind of support does Webdads2u provide after launch?",
+      a: "After launch, Webdads2u assists with content updates, small changes, and improvements when needed. The team stays available to ensure the website runs smoothly as your business grows or changes.",
+    },
+    {
+      q: "Why is web design important for any business?",
+      a: "Web design helps people quickly understand a business. A clear layout builds trust and makes it easier for visitors to decide whether to reach out or continue browsing.",
+    },
+    {
+      q: "How does web design help increase inquiries?",
+      a: "Good web design guides visitors step by step. Clear sections, readable content, and visible contact areas reduce confusion and motivate users to take action.",
+    },
+    {
+      q: "How long does it usually take to design a website?",
+      a: "Timelines vary based on size and complexity. Simple websites may take a few weeks, while larger projects require more planning, reviews, and testing.",
+    },
+    {
+      q: "Does web design affect search visibility?",
+      a: "Yes. Clean structure, fast-loading pages, and mobile-friendly layouts help search engines understand your website better and support long-term visibility.",
+    },
+    {
+      q: "Is professional web design useful for small businesses?",
+      a: "Yes. A well-designed website helps small businesses appear organized and trustworthy. Experienced designers present services clearly and confidently.",
+    },
+    {
+      q: "What should I check before choosing a web design partner?",
+      a: "Check experience, communication clarity, and support after launch. A dependable web design company focuses on long-term value, not just quick delivery.",
     },
   ],
 
   processData: {
-    subtitle: "Our Process",
-    title: "Transform Your Brand with Our Web Design Process",
+    subtitle: "Our Design Process",
+    title: "The Way We Bring Website Designs to Life",
 
     description:
-      "Our web design process starts with understanding your brand and audience. We create wireframes, visual designs, and prototypes before final delivery, ensuring a polished and conversion-ready website.",
+      "Design work follows a clear and steady flow. Each part is handled carefully to keep ideas organized and progress smooth. This approach avoids confusion, supports clear decisions, and helps deliver a website design that feels complete, usable, and reliable.",
 
     steps: [
       {
-        title: "Discovery",
+        title: "Planning",
         icon: "planning",
         points: [
-          "Brand Research",
-          "Audience Analysis",
-          "Competitor Review",
-          "Design Strategy",
+          "Understanding Brand Goals",
+          "Content & Page Mapping",
+          "Initial Design Direction",
+          "Design Approval",
         ],
       },
       {
         title: "Design",
         icon: "development",
         points: [
-          "Wireframes",
-          "UI Design",
-          "Prototype Creation",
-          "Client Feedback",
+          "Visual Style Creation",
+          "Layout & Section Design",
+          "Design Review",
+          "Client Feedback Cycle",
         ],
       },
       {
-        title: "Refinement",
+        title: "Testing",
         icon: "testing",
         points: [
-          "Design Iterations",
-          "Usability Review",
-          "Final Approval",
-          "Asset Preparation",
+          "Design Consistency Check",
+          "Screen & Device Review",
+          "Final Design Review",
+          "Approval Confirmation",
         ],
       },
       {
         title: "Delivery",
         icon: "deployment",
         points: [
-          "Design Handoff",
-          "Developer Support",
-          "Launch Assistance",
-          "Ongoing Updates",
+          "Final Design Handover",
+          "Asset Sharing",
+          "Minor Adjustments",
+          "Design Support",
         ],
       },
     ],

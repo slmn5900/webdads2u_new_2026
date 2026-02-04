@@ -22,10 +22,7 @@ export default function OurProcessSection({
             <span className="h-2 w-2 rounded-full bg-purple-600" />
             <span className="text-sm tracking-wide">{subtitle}</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl leading-tight font-light mb-6">
-            {title}
-          </h2>
-
+          <h2 className="text-4xl md:text-5xl font-light mb-6">{title}</h2>
           <p className="text-white/70 leading-relaxed max-w-md text-xs">
             {description}
           </p>

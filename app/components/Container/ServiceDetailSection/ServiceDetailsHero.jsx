@@ -35,8 +35,7 @@ export default function ServiceDetailsHero({ serviceData }) {
             {serviceData?.title}
           </p>
         </div>
-
-        <h1 className="text-4xl leading-13 mb-3">{serviceData?.subTitle}</h1>
+        <h1 className="text-6xl leading-15 mb-3">{serviceData?.subTitle}</h1>
         <p className="text-white text-xs max-w-xl">
           {serviceData?.description}
         </p>

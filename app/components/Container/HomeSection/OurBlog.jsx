@@ -29,7 +29,7 @@ const blogs = [
   },
   {
     title: "The 9 Best SaaS Marketing Agencies in 2024",
-    image: slide2,
+    image: slide,
     category: ["Web Development"],
     author: "Asghar Paracha",
     readTime: "9 minutes read",
@@ -63,8 +63,7 @@ export default function BlogSection() {
             <span className="inline-block h-2 w-2 rounded-full bg-purple-500" />
             Our Blog
           </p>
-
-          <h2 className="text-4xl md:text-5xl font-medium text-white md:w-[80%]">
+          <h2 className="text-4xl md:text-5xl font-light text-white md:w-[80%]">
             What’s Happening in The Industry?
           </h2>
         </motion.div>

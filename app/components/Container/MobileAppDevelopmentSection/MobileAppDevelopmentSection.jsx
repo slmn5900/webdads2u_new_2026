@@ -9,9 +9,15 @@ import IndustryStackedCards from "../AboutSection/IndustryShowcase";
 import OurProcessSection from "../ServiceDetailSection/OurProcessSection";
 import TestimonialsSection from "../AboutSection/TestimonialsSection";
 import BlogSection from "../HomeSection/OurBlog";
-import FAQSection from "../HomeSection/FaqSection";
+import ServiceRatingSection from "../ServiceSection/ServiceRatingSection";
+import FAQAccordion from "@/app/common/FAQAccordion";
 
 const MobileAppDevelopment = () => {
+  const stats = [
+    { value: "200+", label: "Successful Projects" },
+    { value: "300+", label: "Sales Closed" },
+    { value: "12+", label: "Years of Experience" },
+  ];
   return (
     <>
       <ServiceDetailsHero serviceData={mobileAppDevelopment} />
@@ -26,25 +32,27 @@ const MobileAppDevelopment = () => {
         }
         services={mobileAppDevelopment?.servicesData}
       />
-
       <PartnersRecognition />
-
       <TechStackSection />
-
       <StandOutSection
         title="How We Stand Out?"
         items={mobileAppDevelopment?.standOutData}
       />
-
+      <ServiceRatingSection
+        title="Grow Your Brand Online with a Results-Driven Digital Marketing Agency"
+        description="We help businesses build strong online visibility and strong growth through practical digital marketing. Our team plans and manages SEO, paid ads, social media, and content campaigns that reach the right audience and drive real engagement. Every strategy is built around clear goals, performance tracking, and consistent improvement, helping brands gain attention, generate leads, and stay competitive across digital platforms."
+        stats={stats}
+      />
       <OurProcessSection {...mobileAppDevelopment?.processData} />
-
       <IndustryStackedCards />
-
       <TestimonialsSection />
-
       <BlogSection />
-
-      <FAQSection />
+      <FAQAccordion
+        faqs={mobileAppDevelopment?.faqData}
+        title="FAQs"
+        heading="Frequently Asked Questions"
+        description="Clear answers to common questions about our web development services in Chennai."
+      />
     </>
   );
 };
