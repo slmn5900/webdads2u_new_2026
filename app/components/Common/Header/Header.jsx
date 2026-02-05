@@ -18,35 +18,37 @@ const menuItems = [
 
 const servicesData = [
   {
-    title: "Website Development",
+    title: "web design and developemnt",
     children: [
-      "Web Portal Development",
+      "UI UX Design",
       "Wordpress Web Development",
       "ReactJS Web Development",
-      "Php Web Development",
+      "Real Time Application Development",
       "Nextjs Development",
     ],
   },
   {
-    title: "Digital Marketing",
+    title: "Digital Solutions ",
     children: [
       "Digital Marketing",
-      "PPC Service",
-      "E-commerce SEO",
+      "SEO",
+      "LLM SEO",
+      "GEO",
       "Local SEO",
-      "Off Page SEO",
-      "Link Building",
-      "Content Writing",
+      "Pay Per Click Ads",
+      "E-mail Marketing",
+      "App Store Optimization",
+      "Social media marketing",
     ],
   },
   {
-    title: "Mobile App Development",
+    title: "App Development",
     children: [
       "IOS App Development",
       "Android App Development",
       "Flutter App Development",
-      "React Native",
-      "Mobile App UI/UX",
+      "Hybrid App Development ",
+      "Location based app development ",
     ],
   },
   {
@@ -62,23 +64,46 @@ const servicesData = [
     ],
   },
   {
-    title: "Branding Design",
+    title: "Branding",
     children: [
       "Logo Design",
-      "Brochure Design",
-      "Social Media Design",
       "Flyer Design",
-      "Business Card",
-      "Letterhead",
+      "Brochure Design",
+      "Brand Identity",
+      "Motion Graphics",
+      "Video Production",
+      "Package Designing",
+      "Social Media Posters",
+      "Corporate Identity",
     ],
   },
   {
-    title: "CRM & ERP",
-    children: ["Customized CRM", "Customized ERP"],
+    title: "Software Development",
+    children: [
+      "SAAS Application Development",
+      "Customized CRM",
+      "Customized ERP",
+      "HRMS Software",
+      "B2B Web App Development",
+      "Project Management Automation",
+      "Workflow Automation",
+    ],
   },
+
+  // {
+  //   title: "E-Commerce Development",
+  //   children: ["WooCommerce", "OpenCart", "Shopify"],
+  // },
+
   {
-    title: "E-Commerce Development",
-    children: ["WooCommerce", "OpenCart", "Shopify"],
+    title: "Emerging Technologies",
+    children: [
+      "Gen AI",
+      "AI & ML",
+      "Data Science & Analytics",
+      "LLM",
+      "Blockchain Development",
+    ],
   },
 ];
 

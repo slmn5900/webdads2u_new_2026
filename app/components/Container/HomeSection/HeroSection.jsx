@@ -96,7 +96,7 @@ const HeroSection = () => {
                 />
               </span>
             </button>
-            <Link href={"/contact"} className="text-xs underline capitalize">
+            <Link href={"/projects"} className="text-xs underline capitalize">
               see our work
             </Link>
           </div>

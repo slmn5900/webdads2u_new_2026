@@ -5,18 +5,21 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const digitalMarketingService = {
-  title: "Digital Marketing",
+  title: "Digital Solutions",
   label: "We Are Experts In",
   description:
     "Our digital marketing strategies are designed to increase brand visibility, drive targeted traffic, and convert audiences into loyal customers using data-driven insights.",
   image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80",
   points: [
-    "SEO Optimization",
-    "Paid Advertising (PPC)",
-    "Social Media Marketing",
-    "Email Campaigns",
-    "Influencer Marketing",
-    "Analytics & Reporting",
+    "Digital Marketing",
+    "SEO",
+    "LLM SEO",
+    "GEO",
+    "Local SEO",
+    "Pay Per Click Ads",
+    "E-mail Marketing",
+    "App Store Optimization",
+    "Social media marketing",
   ],
 };
 
@@ -38,7 +41,7 @@ export default function DigitalMarketingSection() {
           </span>
         </div>
         <h2 className="text-4xl md:text-5xl  font-semibold leading-13">
-          Digital <span className="font-normal">Marketing</span>
+          Digital <span className="font-normal">Solutions</span>
         </h2>
       </motion.div>
       <div className="relative z-10  grid grid-cols-1 lg:grid-cols-3 gap-14 px-6">
@@ -82,7 +85,7 @@ export default function DigitalMarketingSection() {
         >
           {digitalMarketingService.points.map((item, i) => (
             <li key={i} className="text-white font-medium">
-              {item}
+             • {item}
             </li>
           ))}
         </motion.ul>

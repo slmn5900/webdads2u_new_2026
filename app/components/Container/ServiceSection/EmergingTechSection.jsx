@@ -12,12 +12,11 @@ const emergingTechService = {
   image:
     "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80",
   points: [
-    "Artificial Intelligence",
-    "Machine Learning",
-    "Blockchain Solutions",
-    "Internet of Things (IoT)",
-    "AR / VR Experiences",
-    "Cloud-Native Systems",
+    "Gen AI",
+    "AI & ML",
+    "Data Science & Analytics",
+    "LLM",
+    "Blockchain Development",
   ],
 };
 
@@ -83,7 +82,7 @@ export default function EmergingTechSection() {
         >
           {emergingTechService.points.map((item, i) => (
             <li key={i} className="text-white font-medium">
-              {item}
+             • {item}
             </li>
           ))}
         </motion.ul>

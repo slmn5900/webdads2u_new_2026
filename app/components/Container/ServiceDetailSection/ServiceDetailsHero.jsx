@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import detailsBanner from "@/app/assets/detailsbanne.webp";
+import detailsBanner from "@/app/assets/detailsbanner.svg";
 import { motion } from "framer-motion";
 import MainLayout from "@/app/common/MainLayout";
 import { useDispatch, useSelector } from "react-redux";
@@ -69,7 +69,7 @@ export default function ServiceDetailsHero({ serviceData }) {
         className="object-cover"
       />
 
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/50" />
 
       <motion.div
         className="relative z-10 max-w-3xl px-20"

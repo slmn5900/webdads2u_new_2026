@@ -3,15 +3,13 @@ const AboutHeader = () => {
   return (
     <div className="relative md:h-screen  overflow-hidden text-white">
       <div className="absolute inset-0 overflow-hidden">
-        <iframe
-          src="https://player.vimeo.com/video/1024271179?background=1&autoplay=1&loop=1&muted=1&controls=0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          frameBorder="0"
-          className="
-            absolute inset-0
-            w-[120%] h-[120%]
-            -left-[10%] -top-[10%]
-          "
+        <video
+          src="/videos/heroabout.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
         />
       </div>
       <div className="relative z-10 h-full px-4 md:px-20 flex items-center">
