@@ -31,8 +31,7 @@ const Footer = () => {
 
   return (
     <footer className="relative overflow-hidden bg-[#1c1c1c] text-gray-400">
-      <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12 pt-20 pb-40">
-        {/* Logo */}
+      <div className="relative z-10   px-4 md:px-20 pt-20 pb-40">
         <div className="relative pb-10 overflow-hidden">
           <div className="relative flex flex-col items-center text-center">
             <motion.div
@@ -171,13 +170,12 @@ const Footer = () => {
         />
       </div>
       <div className="relative z-20 border-t border-white/10 bg-linear-to-r from-[#0f0f14] via-[#14141c] to-[#0f0f14]">
-        <div className="mx-auto max-w-7xl px-6 md:px-12 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/80">
+        <div className="px-4BBhbha md:px-12 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/80">
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy">Privacy Policy</Link>
             <span className="h-4 w-px bg-white/30" />
             <Link href="/terms-conditions">Terms & Conditions</Link>
           </div>
-
           <div>© 2026. Webdads.</div>
         </div>
       </div>

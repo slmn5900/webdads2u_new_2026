@@ -60,7 +60,7 @@ const HeroSection = () => {
             </motion.h1>
           </AnimatePresence>
           <p className="text-xs md:text-sm opacity-90 max-w-xl">
-            Where Innovation meets Execution for Business Growth.
+            Website Design and Development Company in Chennai
           </p>
           <div className="flex gap-6 items-center mt-4">
             <button
@@ -96,7 +96,9 @@ const HeroSection = () => {
                 />
               </span>
             </button>
-            <Link href={"/contact"} className="text-xs underline capitalize">see our work</Link>
+            <Link href={"/contact"} className="text-xs underline capitalize">
+              see our work
+            </Link>
           </div>
         </div>
       </MainLayout>

@@ -13,7 +13,6 @@
 @font-face {
   font-family: "The Future";
   src: url("/fonts/TheFuture-Extralight.woff2") format("woff2");
-  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import MainLayout from "@/app/common/MainLayout";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -22,7 +23,7 @@ const emergingTechService = {
 
 export default function EmergingTechSection() {
   return (
-    <section className="relative bg-black text-white py-28 overflow-hidden px-3 md:px-20">
+    <MainLayout className="relative bg-black text-white py-28 overflow-hidden px-3 md:px-20">
       <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]" />
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -41,7 +42,7 @@ export default function EmergingTechSection() {
           Emerging <span className="font-normal">Tech</span>
         </h2>
       </motion.div>
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-14 px-6">
+      <div className="relative z-10  grid grid-cols-1 lg:grid-cols-3 gap-14 px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,6 +88,6 @@ export default function EmergingTechSection() {
           ))}
         </motion.ul>
       </div>
-    </section>
+    </MainLayout>
   );
 }

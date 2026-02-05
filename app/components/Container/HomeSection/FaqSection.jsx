@@ -9,7 +9,7 @@ export default function FAQSection() {
   return (
     <section className="relative bg-black py-32 overflow-hidden px-3 md:px-20">
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] " />
-      <div className="relative z-10 mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-20">
+      <div className="relative z-10   grid lg:grid-cols-2 gap-20">
         <div className="lg:sticky lg:top-0 self-start">
           <div className="mb-6 flex items-center gap-2 text-sm text-gray-300">
             <span className="h-2 w-2 rounded-full bg-purple-500" />

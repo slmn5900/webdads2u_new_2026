@@ -45,7 +45,7 @@ export default function ServicesShowcase() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 text-center mb-20"
       >
-        <div className="flex items-center justify-center gap-3 mb-6">
+        <div className="flex items-center justify-center gap-3 ">
           <span className="w-2.5 h-2.5 rounded-full bg-purple-500" />
           <span className="text-sm tracking-widest text-white/80 uppercase">
             Count On Us For
@@ -62,7 +62,7 @@ export default function ServicesShowcase() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         />
       </div>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-center ">
+      <div className=" grid grid-cols-1 lg:grid-cols-3 gap-12 items-center ">
         <AnimatePresence mode="wait">
           <motion.div
             key={services[index].title}

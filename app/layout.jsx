@@ -5,6 +5,7 @@ import Footer from "./components/Common/Footer/Footer";
 import SmoothScrollProvider from "./common/SmoothScrollProvider";
 import FixedSocialBar from "./common/FixedSocialBar";
 import FixedContactBar from "./common/FixedContactBar";
+import ToastProvider from "./common/ToastProvider";
 
 export const metadata = {
   title: "Best Web development and Website",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body suppressHydrationWarning={true}>
         <ReduxProvider>
+          <ToastProvider />
           <SmoothScrollProvider>
             <Header />
             <FixedSocialBar />

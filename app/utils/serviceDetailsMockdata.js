@@ -819,162 +819,331 @@ export const digitalMarketing = {
   },
 };
 
-export const mobileAppDevelopment = {
-  title: "Mobile App Development",
-  subTitle: "Scalable Mobile Applications for Modern Businesses",
-
+export const ecommerce = {
+  title: "E-Commerce website development company ",
+  subTitle:
+    "Build a Reliable Online Store with Our E-commerce Development Services ",
   description:
-    "We design and develop powerful mobile applications that help businesses engage users, streamline operations, and scale faster. From concept to launch, our mobile app development services deliver performance-driven, user-friendly solutions.",
-
+    "We create online stores that simplify buying decisions, improve customer trust, and support strong sales growth for your business by delivering clear product displays, smooth checkout experiences, and reliable performance across all devices.",
   servicesData: [
     {
-      title: "Android App Development",
+      title: "WooCommerce Development",
       description:
-        "Custom Android applications built for performance, security, and scalability.",
-      link: "/mobile-app-development/android",
+        "WooCommerce gives you full control over your online store. We build stores that are easy to update, flexible to customise, and simple to manage daily orders. This helps you run your business your way, reduce dependency on tools, and scale your store as sales grow.",
+      link: "/ecommerce/woocommerce",
     },
     {
-      title: "iOS App Development",
+      title: "Shopify Development",
       description:
-        "High-quality iOS apps designed to deliver seamless user experiences.",
-      link: "/mobile-app-development/ios",
+        "Shopify helps you start selling faster with fewer technical worries. We set up clean, conversion-friendly Shopify stores that make product management and order handling simple. This allows you to focus on sales and marketing while your store runs smoothly, securely, and reliably.",
+      link: "/ecommerce/shopify",
     },
     {
-      title: "Cross Platform Development",
+      title: "OpenCart Development",
       description:
-        "Single codebase apps using React Native or Flutter for faster delivery.",
-      link: "/mobile-app-development/cross-platform",
-    },
-    {
-      title: "UI/UX Design",
-      description:
-        "Intuitive mobile designs focused on usability and engagement.",
-      link: "/mobile-app-development/ui-ux",
-    },
-    {
-      title: "App Maintenance & Support",
-      description: "Ongoing support, updates, and performance optimization.",
-      link: "/mobile-app-development/support",
+        "OpenCart works well for businesses that want a budget-friendly and stable e-commerce platform. We develop stores that load fast, organise products clearly, and keep management simple. This helps you control costs, manage inventory easily, and offer customers a smooth shopping experience.",
+      link: "/ecommerce/opencart",
     },
   ],
   faqData: [
     {
-      q: "How does WebDads2U help my business grow online?",
-      a: "WebDads2U studies your business needs and creates a simple plan to help you reach more people online. We focus on clear steps, clean content, and regular updates to increase visibility, enquiries, and overall online results.",
+      q: "Why is Webdads2u considered a reliable choice for e-commerce development?",
+      a: "Webdads2u builds online stores that are simple to use, stable, and designed to support real sales. We focus on how customers browse and buy, not just development. With a clear process and long-term support, many businesses trust us as a reliable ecommerce development company in Chennai.",
     },
     {
-      q: "What makes WebDads2U different from other digital marketing companies?",
-      a: "We follow a friendly and easy process with simple reports, fast support, and clear explanations. Our goal is stress-free marketing that delivers real growth using methods suited to your business size and audience.",
+      q: "What e-commerce platforms does Webdads2u work with?",
+      a: "We develop ecommerce websites using WooCommerce, Shopify, OpenCart, and custom solutions. Platform selection depends on your products, budget, and growth plans. We guide you toward the right platform instead of forcing a one-size solution.",
     },
     {
-      q: "Does WebDads2U offer digital marketing services for small businesses?",
-      a: "Yes. Many small businesses choose us because we use simple, effective methods. We avoid complicated plans and focus on what brings results, guiding you step by step for steady growth.",
+      q: "Does Webdads2u offer custom e-commerce website development?",
+      a: "Yes. We specialise in custom ecommerce development for businesses that need unique features or workflows. This gives better control over design, checkout flow, and integrations, making it ideal for long-term growth.",
     },
     {
-      q: "Will WebDads2U manage all my online work?",
-      a: "Yes. We manage campaigns, content, reports, and improvements from one place, so you can focus on your business while your digital work runs smoothly every day.",
+      q: "Who will handle my e-commerce website project?",
+      a: "Your project is managed by experienced ecommerce developers, designers, and testers. Each team member handles a specific task to ensure your store is carefully built and reviewed at every stage.",
     },
     {
-      q: "Can WebDads2U improve my brand image online?",
-      a: "Yes. We create neat designs, clear posts, and strong messaging that make your brand look professional. This builds trust faster and encourages customers to contact you more often.",
+      q: "Does Webdads2u manage both design and development?",
+      a: "Yes. We handle layout, user experience, functionality, and integrations together, avoiding gaps between design and development and delivering a smooth, consistent online store.",
     },
     {
-      q: "How often does WebDads2U optimise my online performance?",
-      a: "We review your data every month and make small updates to improve reach, clicks, and engagement. This ongoing optimisation keeps your business active and ready for new opportunities.",
+      q: "What kind of support does Webdads2u provide after launch?",
+      a: "We provide updates, bug fixes, and improvements after launch. Many clients choose us because we stay involved and support their store as their business grows.",
     },
     {
-      q: "What does a digital marketing agency do?",
-      a: "A digital marketing agency helps businesses grow online using SEO, paid ads, content, branding, and social media to increase visibility, traffic, and enquiries.",
+      q: "What is e-commerce website development?",
+      a: "E-commerce website development is the process of building an online store where users can browse products, place orders, and make secure payments. It includes design, development, product setup, and testing.",
     },
     {
-      q: "Why is hiring a digital marketing consultant useful?",
-      a: "A consultant guides you with the right plans, helps avoid mistakes, checks what works, and suggests better ideas for steady improvement.",
+      q: "How do I choose the right e-commerce platform?",
+      a: "The right platform depends on your products, technical needs, and budget. WooCommerce offers flexibility, Shopify is easy to manage, and OpenCart is cost-effective. A good development team helps you choose based on your goals.",
     },
     {
-      q: "How do digital marketing services help my business?",
-      a: "These services help your business appear in more online places, bringing more visitors, building trust, and increasing chances of gaining new customers.",
+      q: "How long does e-commerce website development take?",
+      a: "A basic store may take a few weeks, while custom stores take longer. Clear planning and defined requirements help reduce delays.",
     },
     {
-      q: "What is the difference between SEO and online marketing?",
-      a: "SEO improves visibility in search results, while online marketing includes ads, social media, and content. Both work together to grow your business.",
+      q: "Can I manage my e-commerce store after it is built?",
+      a: "Yes. Most platforms let you manage products, pricing, orders, and customers easily without technical knowledge.",
     },
     {
-      q: "How long does digital marketing take to show results?",
-      a: "Some methods bring quick results, while others take time. You may see improvements within weeks, with stronger growth in a few months through regular updates.",
+      q: "Is security important for an e-commerce website?",
+      a: "Yes. Security protects customer data and payments. Professional development includes secure gateways, data protection, and safe coding practices.",
     },
     {
-      q: "Do digital marketing companies work for all types of businesses?",
-      a: "Yes. Any business wanting more visibility, enquiries, and online trust can benefit from digital marketing, including small, medium, and large brands.",
+      q: "Can an e-commerce website scale as my business grows?",
+      a: "Yes. A well-built store supports new products, users, and features without major changes, keeping performance stable as demand increases.",
     },
   ],
 
   standOutData: [
     {
-      title: "User-Centered Design",
+      title: "Stores Built to Sell, Not Just Display",
       description:
-        "We craft experiences that users love through thoughtful UI/UX.",
+        "Webdads2u develops e-commerce websites that guide customers smoothly from browsing to checkout. Clear layouts, simple navigation, and well-planned product pages help reduce confusion and support better buying decisions.",
     },
     {
-      title: "Agile Development",
+      title: "Simple Store Management for Business Owners",
       description:
-        "Fast iterations with transparent communication at every stage.",
+        "We build stores that are easy to update and manage. Adding products, tracking orders, and handling payments stay simple, saving time and reducing dependency on technical support.",
     },
     {
-      title: "Scalable Architecture",
-      description: "Future-ready apps built to grow with your business.",
+      title: "Secure and Reliable Shopping Experience",
+      description:
+        "Security is built into every e-commerce website we develop. Safe payment systems, stable performance, and protected data help customers shop confidently and help businesses maintain trust.",
     },
     {
-      title: "Quality Assurance",
+      title: "Optimised for Speed and Smooth Performance",
       description:
-        "Rigorous testing ensures bug-free and reliable applications.",
+        "Fast-loading pages and smooth checkout flows keep customers engaged. Our e-commerce websites are built to perform well across devices, reducing drop-offs and improving overall shopping experience.",
+    },
+    {
+      title: "Scalable Platforms for Business Growth",
+      description:
+        "Webdads2u builds e-commerce stores that grow with your business. New products, features, and traffic can be added easily without affecting performance or stability.",
+    },
+    {
+      title: "Ongoing Support After Store Launch",
+      description:
+        "Our support continues even after your store goes live. We help with updates, improvements, and fixes to ensure your e-commerce website stays active, secure, and aligned with your business goals.",
     },
   ],
 
   processData: {
     subtitle: "Our Process",
-    title: "Elevate Your App Experience with Our Seamless Process",
-
+    title: "Our Ecommerce Development Process",
     description:
-      "Our mobile app process includes business analysis, UX planning, development, testing, and deployment to ensure high-quality mobile experiences.",
+      "Our e-commerce development process turns business ideas into reliable online stores. Each stage is planned to keep development clear, structured, and aligned with sales goals, ensuring smooth shopping experiences and stable performance as the store grows.",
 
     steps: [
       {
-        title: "Planning",
+        title: "Store Discovery",
         icon: "planning",
         points: [
-          "Requirement Analysis",
-          "User Research",
-          "Wireframes",
-          "Client Approval",
+          "Understanding Business Goals",
+          "Identifying Target Customers",
+          "Product & Category Analysis",
+          "Platform Selection",
         ],
       },
       {
-        title: "Development",
+        title: "Store Planning",
         icon: "development",
         points: [
-          "Mobile App Coding",
-          "API Integration",
-          "UI Implementation",
-          "Review Cycles",
+          "Defining Store Structure",
+          "Planning User Flow",
+          "Payment & Shipping Setup",
+          "Development Roadmap Creation",
         ],
       },
       {
-        title: "Testing",
-        icon: "testing",
-        points: [
-          "Device Testing",
-          "Quality Assurance",
-          "Bug Fixing",
-          "Final Review",
-        ],
-      },
-      {
-        title: "Deployment",
+        title: "Store Development",
         icon: "deployment",
         points: [
-          "Play Store / App Store Launch",
-          "Monitoring",
-          "Support & Maintenance",
+          "Frontend & Backend Development",
+          "Product & Feature Setup",
+          "Third-Party Integration",
+          "Internal Testing",
+        ],
+      },
+      {
+        title: "Store Launch & Support",
+        icon: "testing",
+        points: [
+          "Website Go-Live",
+          "Performance Monitoring",
+          "Issue Fixes & Updates",
+          "Ongoing Store Support",
+        ],
+      },
+    ],
+  },
+};
+
+export const mobileAppDevelopment = {
+  title: "Mobile App Development",
+  subTitle: "Custom mobile app development company in chennai",
+  description:
+    "Turn your idea into a functioning mobile app through our clear process. We create apps with easy navigation, clean layouts, and solid security. Whether it’s for Android, iOS, or cross-platform, your app is designed to run quickly and manage real business tasks.",
+
+  servicesData: [
+    {
+      title: "Android App Development",
+      description:
+        "We build Android apps that run smoothly on every device with clear screens, useful features, and simple flows. Your app loads fast, stays stable under heavy use, and grows with ongoing updates and support.",
+      link: "/mobile-app-development/android",
+    },
+    {
+      title: "iOS App Development",
+      description:
+        "Our iOS apps feel natural, look clean, and deliver a premium user experience. Built to follow Apple guidelines, your app responds fast, performs steadily, and stays secure with full support at every stage.",
+      link: "/mobile-app-development/ios",
+    },
+    {
+      title: "Mobile App UI/UX Design",
+      description:
+        "We design clear layouts and simple user paths that feel natural. Our UI/UX approach helps users complete tasks faster, builds trust, and improves the overall app experience.",
+      link: "/mobile-app-development/ui-ux",
+    },
+    {
+      title: "React Native App Development",
+      description:
+        "Using one shared codebase, we create apps for both platforms, reducing time and cost. Your app stays consistent, responds quickly, and reaches more users with less effort.",
+      link: "/mobile-app-development/cross-platform",
+    },
+    {
+      title: "Flutter App Development",
+      description:
+        "Flutter lets us build modern apps with smooth motion and fast performance. Your app launches quickly, feels approachable, and stays ready for future updates and new ideas.",
+      link: "/mobile-app-development/cross-platform",
+    },
+  ],
+
+  faqData: [
+    {
+      q: "What makes WebDads2U a reliable mobile app development company in Chennai?",
+      a: "WebDads2U focuses on clear planning, simple communication, and strong technical work. We understand your business needs and build apps that are easy to use, fast to load, and stable for daily operations. This makes us a dependable choice for long-term mobile solutions.",
+    },
+    {
+      q: "How do your mobile app developers in Chennai handle project requirements?",
+      a: "Our team studies your goals, user needs, and app functions before development. We turn your ideas into a structured plan that guides design and coding, reducing confusion and ensuring your app supports real tasks without unnecessary features.",
+    },
+    {
+      q: "What makes WebDads2U different from other mobile app companies?",
+      a: "We focus on clarity, simple user flow, and strong performance. Instead of complex features, we build clean and practical apps that users can understand easily, helping improve customer satisfaction over time.",
+    },
+    {
+      q: "Do you offer end-to-end mobile application development services in Chennai?",
+      a: "Yes. We manage everything from planning and UI/UX to development, backend, testing, launch, and support. This full-service approach keeps your project organised and makes communication easier throughout the process.",
+    },
+    {
+      q: "Why do businesses choose WebDads2U as a top mobile app development company in Chennai?",
+      a: "Clients choose us for simple, stable apps built for real users. Our solutions run smoothly across devices and remain easy to update, helping businesses achieve results without complicated processes.",
+    },
+    {
+      q: "Do you support apps after launch?",
+      a: "Yes. We monitor performance, fix issues, update features, and keep your app secure. Long-term support ensures your app grows along with your business.",
+    },
+    {
+      q: "How long does mobile app development usually take?",
+      a: "Timelines depend on features and complexity. Simple apps may take a few weeks, while advanced apps need more time. Clear planning and steady communication help us deliver faster without compromising quality.",
+    },
+    {
+      q: "What platforms can you build apps for?",
+      a: "We develop apps for both Android and iOS using technologies like Kotlin, Swift, React Native, and Flutter, helping you reach more users based on your goals and budget.",
+    },
+    {
+      q: "Are mobile application developers in Chennai capable of handling large projects?",
+      a: "Yes. With proper planning and a strong backend, developers can manage large and feature-rich apps smoothly. Chennai’s growing tech ecosystem supports advanced development needs.",
+    },
+    {
+      q: "What is the benefit of choosing a mobile app development agency in Chennai?",
+      a: "You get experienced teams, competitive pricing, and strong technical skills. Agencies here focus on practical solutions, clean layouts, and long-term support for steady digital growth.",
+    },
+    {
+      q: "How does mobile application development improve my business?",
+      a: "A well-built app improves communication, speeds up services, and increases user engagement. It builds trust, boosts conversions, and strengthens customer relationships.",
+    },
+    {
+      q: "What should I prepare before starting mobile application development?",
+      a: "Know your app’s purpose, target users, and core features. You don’t need technical knowledge—just a clear idea of the problem your app solves. A good development team will handle the rest.",
+    },
+  ],
+
+  standOutData: [
+    {
+      title: "Clear Planning Before Coding",
+      description:
+        "We define your goals, user needs, and technical requirements before development starts. This strong planning reduces mistakes, avoids rework, and keeps your project moving smoothly from day one.",
+    },
+    {
+      title: "Streamlined Development Workflow",
+      description:
+        "Our step-by-step workflow keeps projects organised with regular updates and clear timelines. You always know progress and next steps, ensuring smooth development without delays.",
+    },
+    {
+      title: "User-Focused Interface Design",
+      description:
+        "We build clean, easy-to-use interfaces with clear layouts and simple actions. This improves engagement, reduces user errors, and delivers a better experience across all devices.",
+    },
+    {
+      title: "High-Performance App Architecture",
+      description:
+        "Using optimised code and scalable structures, we create fast and stable apps that handle growth, heavy workloads, and long-term usage with consistent performance.",
+    },
+    {
+      title: "Continuous Support and Maintenance",
+      description:
+        "After launch, we monitor performance, fix issues early, and provide updates to keep your app secure, stable, and aligned with evolving business needs.",
+    },
+    {
+      title: "Scalable Structure for Future Growth",
+      description:
+        "Your app is built to expand easily with new features and users. This future-ready setup protects your investment and supports long-term business growth.",
+    },
+  ],
+
+  processData: {
+    subtitle: "Our Process",
+    title: "Our Mobile App Development Process",
+    description:
+      "Our app development process turns ideas into reliable and user-friendly mobile applications. Each stage is planned to keep development clear, structured, and aligned with business goals, ensuring the app performs well and scales as needs grow.",
+
+    steps: [
+      {
+        title: "App Discovery",
+        points: [
+          "Understanding Business Goals",
+          "Identifying User Needs",
+          "Feature Requirement Analysis",
+          "Platform Selection",
+        ],
+      },
+      {
+        title: "App Planning",
+        points: [
+          "Defining App Flow",
+          "Setting Technical Structure",
+          "UI Wireframe Planning",
+          "Development Roadmap Creation",
+        ],
+      },
+      {
+        title: "App Development",
+        points: [
+          "Frontend & Backend Development",
+          "Feature Implementation",
+          "System Integration",
+          "Internal Testing",
+        ],
+      },
+      {
+        title: "App Launch & Support",
+        points: [
+          "App Store Deployment",
+          "Performance Monitoring",
+          "Issue Fixes & Updates",
+          "Ongoing App Support",
         ],
       },
     ],
@@ -1106,7 +1275,6 @@ export const webDesign = {
   processData: {
     subtitle: "Our Design Process",
     title: "The Way We Bring Website Designs to Life",
-
     description:
       "Design work follows a clear and steady flow. Each part is handled carefully to keep ideas organized and progress smooth. This approach avoids confusion, supports clear decisions, and helps deliver a website design that feels complete, usable, and reliable.",
 
@@ -1149,6 +1317,196 @@ export const webDesign = {
           "Asset Sharing",
           "Minor Adjustments",
           "Design Support",
+        ],
+      },
+    ],
+  },
+};
+
+export const brandingDesign = {
+  title: "Branding design company ",
+  subTitle: "Turning Business Ideas Into Visual Identity ",
+  description:
+    "We design websites that look clear, feel smooth, and are easy to use. Every design focuses on your brand message, user comfort, and visual balance, helping visitors understand your business quickly and stay engaged longerYour brand defines how people see your business. We apply clear strategy and creative thinking to build or improve brand identity, covering visuals, tone, and communication.",
+  servicesData: [
+    {
+      title: "Logo Design",
+      description:
+        "A logo is the face of your brand. We create simple, memorable logos that clearly represent your business and build trust from the very first look.",
+      link: "/branding/logo-design",
+    },
+    {
+      title: "Brochure Design",
+      description:
+        "We design brochures that present your services, values, and details in a clear and organized way, helping customers understand your offerings better.",
+      link: "/branding/brochure-design",
+    },
+    {
+      title: "Flyer Design",
+      description:
+        "Flyers are perfect for quick promotion. We create eye-catching flyers with clean visuals and clear messages that encourage people to take action.",
+      link: "/branding/flyer-design",
+    },
+    {
+      title: "Letterhead Design",
+      description:
+        "Our letterhead designs match your brand style and look professional in both print and digital formats, boosting credibility and brand recognition.",
+      link: "/branding/letterhead-design",
+    },
+    {
+      title: "Business Card Design",
+      description:
+        "We design professional, easy-to-read business cards that help people remember your brand and contact you effortlessly.",
+      link: "/branding/business-card-design",
+    },
+    {
+      title: "Rebranding",
+      description:
+        "We refresh your visual identity and messaging while keeping what works, helping your brand feel clear, modern, and confident in today’s market.",
+      link: "/branding/rebranding",
+    },
+    {
+      title: "Brand Strategy",
+      description:
+        "We define your audience, positioning, and goals to build a clear brand direction that keeps your messaging consistent and recognizable.",
+      link: "/branding/brand-strategy",
+    },
+    {
+      title: "Digital Branding",
+      description:
+        "We create consistent visuals and tone across websites and social platforms, helping your brand stay professional, trustworthy, and memorable online.",
+      link: "/branding/digital-branding",
+    },
+  ],
+
+  brandStandOutData: [
+    {
+      title: "Strong Brands Stay in People’s Minds",
+      description:
+        "Consistent visuals, tone, and messaging help customers recognize your business easily. A memorable brand builds confidence, encourages repeat visits, and supports steady business growth.",
+    },
+    {
+      title: "Branding Helps Customers Trust You Faster",
+      description:
+        "Clear and professional branding reduces doubt and builds trust quickly. When customers feel confident in your brand, they engage more, decide faster, and return often.",
+    },
+    {
+      title: "A Strong Brand Shows Your True Identity",
+      description:
+        "Branding communicates who you are, what you offer, and why you matter. A clear identity builds emotional connection, attracts the right audience, and helps your business stand out.",
+    },
+    {
+      title: "Branding Turns Interest Into Action",
+      description:
+        "Good branding guides customers from curiosity to action. Clear messaging and appealing visuals help people understand your value and encourage inquiries, sign-ups, or purchases.",
+    },
+    {
+      title: "Strong Branding Builds Long-Term Value",
+      description:
+        "A trusted brand increases perceived value and credibility. Customers are more willing to choose and pay for brands they recognize, helping your business grow and stay competitive.",
+    },
+    {
+      title: "Branding Helps You Compete Better",
+      description:
+        "Strong branding highlights what makes your business unique. It improves visibility, strengthens recognition, and gives you a clear edge in competitive markets.",
+    },
+  ],
+
+  brandingFaqData: [
+    {
+      q: "How does Webdads2u approach branding projects?",
+      a: "Webdads2u follows a structured branding process focused on clarity, consistency, and long-term value. Every project starts by understanding your business, audience, and goals to create branding that communicates clearly, builds trust, and supports growth across all platforms.",
+    },
+    {
+      q: "Why do businesses choose Webdads2u for graphic designing?",
+      a: "Businesses choose Webdads2u because every design is created with purpose. From logos to brochures, designs support brand identity through clean layouts, easy readability, and professional presentation that helps brands look confident and reliable.",
+    },
+    {
+      q: "Does Webdads2u offer complete branding and design services?",
+      a: "Yes. Webdads2u provides end-to-end branding and graphic designing services including logo design, brochure design, flyer design, business card design, and letterhead design—helping maintain consistency across all marketing materials.",
+    },
+    {
+      q: "How does Webdads2u ensure brand consistency?",
+      a: "Brand consistency is maintained through defined guidelines for colours, fonts, layouts, and tone. The same brand look is applied across digital and print materials, helping customers recognise your business easily and build long-term trust.",
+    },
+    {
+      q: "Can Webdads2u support branding needs as the business grows?",
+      a: "Yes. Webdads2u provides ongoing updates and refinements so branding stays relevant as your business grows, making it easier to launch new services or refresh designs without losing brand identity.",
+    },
+    {
+      q: "What makes Webdads2u different from other creative agencies?",
+      a: "Webdads2u focuses on clarity, simplicity, and business alignment. Every branding decision supports communication, recognition, and steady business growth—not just visual appeal.",
+    },
+    {
+      q: "What is the difference between branding and graphic design?",
+      a: "Branding defines how a business is perceived, while graphic design visually expresses that identity. Branding sets direction and message, and graphic design turns it into logos, brochures, flyers, and cards.",
+    },
+    {
+      q: "Why is professional logo design important for businesses?",
+      a: "A logo is the first visual identity of a brand. Professional logo design creates simple, meaningful, and memorable logos that support recognition across websites, social media, and printed materials.",
+    },
+    {
+      q: "How does brochure design support marketing efforts?",
+      a: "Brochures explain services and values clearly. Well-designed brochures improve understanding, support sales conversations, and help customers make informed decisions.",
+    },
+    {
+      q: "Are flyers still useful for promotion?",
+      a: "Yes. Flyers work well for events, offers, and promotions. Clear layouts and balanced visuals help grab attention quickly and encourage immediate action.",
+    },
+    {
+      q: "Why are business cards and visiting cards still relevant?",
+      a: "Business cards remain an important professional tool. Clean, organised cards help people remember your brand and make follow-up communication easier after meetings or events.",
+    },
+    {
+      q: "How do I choose the right branding and design company?",
+      a: "Choose a company that understands your business goals and maintains consistency. A good branding partner focuses on clear communication, professional design, and long-term support to help your brand grow while staying recognisable.",
+    },
+  ],
+
+  processData: {
+    subtitle: "Our Design Process",
+    title: "Our Branding Journey",
+    description:
+      "Our branding journey turns business intent into a clear and consistent identity. Each stage helps organise ideas, define direction, and build brand elements that communicate properly and remain effective as the business grows.",
+    steps: [
+      {
+        title: "Brand Discovery",
+        icon: "planning",
+        points: [
+          "Understanding Business Purpose",
+          "Identifying Core Values",
+          "Audience Insight Review",
+          "Brand Direction Alignment",
+        ],
+      },
+      {
+        title: "Brand Planning",
+        icon: "development",
+        points: [
+          "Defining Brand Position",
+          "Message Tone Setting",
+          "Visual Style Planning",
+          "Brand Blueprint Creation",
+        ],
+      },
+      {
+        title: "Brand Creation",
+        icon: "testing",
+        points: [
+          "Logo DevelopmenT",
+          "Visual System Design",
+          "Brand Asset Refinement",
+          "Design Validation",
+        ],
+      },
+      {
+        title: "Brand Rollout & Support",
+        icon: "deployment",
+        points: [
+          "Brand Asset Deploymen",
+          "Consistency Checks",
+          "Usage Guidance",
+          "Future Brand Assistance",
         ],
       },
     ],

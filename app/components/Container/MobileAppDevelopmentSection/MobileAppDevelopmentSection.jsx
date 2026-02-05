@@ -22,25 +22,18 @@ const MobileAppDevelopment = () => {
     <>
       <ServiceDetailsHero serviceData={mobileAppDevelopment} />
       <StickyServicesSection
-        heading={
-          <>
-            Custom Mobile App <br />
-            Development Services <br />
-            That Power Your <br />
-            Business Growth
-          </>
-        }
+        heading={<>Our premier mobile application development Services</>}
         services={mobileAppDevelopment?.servicesData}
       />
       <PartnersRecognition />
       <TechStackSection />
       <StandOutSection
-        title="How We Stand Out?"
+        title="How Is Webdads2u One of the Best Mobile Application Development Company in Chennai"
         items={mobileAppDevelopment?.standOutData}
       />
       <ServiceRatingSection
-        title="Grow Your Brand Online with a Results-Driven Digital Marketing Agency"
-        description="We help businesses build strong online visibility and strong growth through practical digital marketing. Our team plans and manages SEO, paid ads, social media, and content campaigns that reach the right audience and drive real engagement. Every strategy is built around clear goals, performance tracking, and consistent improvement, helping brands gain attention, generate leads, and stay competitive across digital platforms."
+        title="Build Powerful Mobile Applications with Our App Development Services"
+        description="We help businesses turn ideas into reliable mobile applications through careful planning and development. Our team works on app design, functionality, and performance to match real user needs and business goals. Every app is built to deliver smooth experiences, support growth, and perform consistently across devices and platforms."
         stats={stats}
       />
       <OurProcessSection {...mobileAppDevelopment?.processData} />

@@ -28,7 +28,7 @@ const DigitalMarketing = () => {
       <PartnersRecognition />
       <TechStackSection />
       <StandOutSection
-        title="How We Stand Out?"
+        title="Why Choose Webdads2u for Digital marketing"
         items={digitalMarketing?.standOutData}
       />
       <ServiceRatingSection

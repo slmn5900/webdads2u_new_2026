@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 import webdadaslogo from "@/app/assets/webdadaslogo.svg";
+import webdadaslogo1 from "@/app/assets/webdadaslogo1.svg";
+import HireUsModal from "@/app/common/HireUsModal";
 
 const menuItems = [
   { label: "About", path: "/about" },
@@ -109,6 +111,7 @@ export default function Header() {
   const [isServicesHovered, setIsServicesHovered] = useState(false);
   const [servicesTimeout, setServicesTimeout] = useState(null);
   const [openService, setOpenService] = useState(null);
+  const [hireOpen, setHireOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -197,8 +200,14 @@ export default function Header() {
         >
           <div className="flex items-center justify-between px-6 py-4 lg:grid lg:grid-cols-[auto_1fr_auto]">
             <Link href="/">
-              <Image src={webdadaslogo} alt="logo" width={120} />
+              <Image
+                src={isScrolled ? webdadaslogo : webdadaslogo1}
+                alt="logo"
+                width={120}
+                className="transition-all duration-300"
+              />
             </Link>
+
             <nav className="hidden lg:flex justify-center gap-6 ">
               {menuItems?.map((item) => (
                 <div
@@ -290,13 +299,14 @@ export default function Header() {
               ))}
             </nav>
             <div className="flex items-center gap-3">
-              <Link
-                href="/contact"
-                className="hidden lg:flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold text-white
-                bg-linear-to-r from-purple-600 to-fuchsia-600 hover:from-purple-700 hover:to-fuchsia-700"
+              <button
+                onClick={() => setHireOpen(true)}
+                className="hidden lg:flex items-center cursor-pointer gap-2 px-5 py-2 rounded-full text-sm font-semibold text-white
+bg-linear-to-r from-purple-600 to-fuchsia-600 hover:from-purple-700 hover:to-fuchsia-700"
               >
                 Hire us <ArrowRight size={16} />
-              </Link>
+              </button>
+
               <a
                 href="mailto:info@webdads2u.com"
                 className="hidden lg:flex text-white h-8 w-8 items-center justify-center rounded-full border border-white/20 hover:bg-purple-500/20"
@@ -351,6 +361,7 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
+      <HireUsModal open={hireOpen} onClose={() => setHireOpen(false)} />
     </>
   );
 }

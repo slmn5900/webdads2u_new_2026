@@ -5,10 +5,21 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { MapPin, Phone } from "lucide-react";
 import moon from "@/app/assets/moon.webp";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Notification from "@/app/common/Notification";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  clearError,
+  clearMessage,
+  createProduct,
+} from "@/app/store/slice/contact";
+import { errorAlert } from "@/app/utils/alertService";
 
 const ContactSection = () => {
+  const dispatch = useDispatch();
+  const { loading, message, error } = useSelector((state) => state.contact);
+  const [showNotification, setShowNotification] = useState(false);
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -17,28 +28,31 @@ const ContactSection = () => {
     message: "",
   });
 
-  const [loading, setLoading] = useState(false);
-  const [showNotification, setShowNotification] = useState(false);
-
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async () => {
-    setLoading(true);
-    await new Promise((res) => setTimeout(res, 1500));
-    console.log(form);
-    setForm({
-      name: "",
-      email: "",
-      phone: "",
-      service: "",
-      message: "",
-    });
-
-    setLoading(false);
-    setShowNotification(true);
+    dispatch(createProduct(form));
   };
+
+  useEffect(() => {
+    if (message) {
+      setShowNotification(true);
+      dispatch(clearMessage());
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
+    }
+    if (error) {
+      errorAlert(error);
+      dispatch(clearError());
+    }
+  }, [message, error]);
 
   return (
     <>
@@ -48,7 +62,7 @@ const ContactSection = () => {
           backgroundImage: `url(${contactbg.src})`,
         }}
       >
-        <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 items-center">
+        <div className="relative z-10   grid lg:grid-cols-2 items-center">
           <div>
             <div className="flex items-center gap-2 mb-6">
               <span className="w-2 h-2 rounded-full bg-purple-500 text-xs font-medium" />
@@ -72,7 +86,7 @@ const ContactSection = () => {
       </MainLayout>
 
       <MainLayout className="relative w-full min-h-screen flex items-center bg-cover bg-center px-3 md:px-20 bg-black">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center w-full">
+        <div className=" grid lg:grid-cols-2 gap-16 items-center w-full">
           <div>
             <h1 className="text-white text-4xl font-medium leading-tight mb-6">
               Grow Your Business With <br />
@@ -160,7 +174,7 @@ const ContactSection = () => {
               <button
                 onClick={handleSubmit}
                 disabled={loading}
-                className="w-full bg-linear-to-r from-purple-600 to-pink-500 py-3 rounded-xl text-white hover:scale-105 transition"
+                className="w-full bg-linear-to-r from-purple-600 to-pink-500 py-3 rounded-xl text-white hover:scale-105 transition disabled:opacity-50"
               >
                 {loading ? "Sending..." : "Submit"}
               </button>
@@ -168,7 +182,7 @@ const ContactSection = () => {
           </div>
         </div>
       </MainLayout>
-      <MainLayout className="relative w-full min-h-screen bg-black text-white overflow-hidden flex items-center px-3 md:px-20">
+      <MainLayout className="relative w-full py-20 bg-black text-white overflow-hidden flex items-center px-3 md:px-20">
         <div className=" grid lg:grid-cols-3 gap-10 items-center relative z-10">
           <div className="hidden lg:block">
             <p className="text-gray-300 leading-relaxed text-xs">
@@ -195,8 +209,8 @@ const ContactSection = () => {
             <div className="flex items-start gap-3 text-gray-300 text-xs">
               <MapPin size={18} />
               <p>
-                FIRST FLOOR, 2ND PORTION, 36, Saraswathi Nagar Main Rd, Chennai,
-                Tamil Nadu 600062
+                FIRST FLOOR, 2ND PORTION, 36, Saraswathi Nagar Main Rd,
+                Thirumullaivoyal, Chennai, Tamil Nadu 600062
               </p>
             </div>
             <div className="flex items-center gap-3 text-gray-300 text-xs">
@@ -210,7 +224,6 @@ const ContactSection = () => {
         <Notification
           title="Thank You!"
           message="Your form has been submitted successfully. Our team will contact you shortly."
-          phone="+91-88256 07550"
           onClose={() => setShowNotification(false)}
         />
       )}

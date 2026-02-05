@@ -1,4 +1,5 @@
 "use client";
+import MainLayout from "@/app/common/MainLayout";
 import { PencilRuler, Code2, BadgeCheck, Rocket } from "lucide-react";
 
 const iconMap = {
@@ -15,7 +16,7 @@ export default function OurProcessSection({
   steps,
 }) {
   return (
-    <section className="relative min-h-screen bg-black text-white">
+    <MainLayout className="relative min-h-screen bg-black text-white">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 px-4 md:px-20 py-32">
         <div className="sticky top-32 h-fit">
           <div className="flex items-center gap-3 mb-6">
@@ -55,6 +56,6 @@ export default function OurProcessSection({
           })}
         </div>
       </div>
-    </section>
+    </MainLayout>
   );
 }

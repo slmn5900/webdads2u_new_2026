@@ -336,7 +336,7 @@ export const pageExit = {
   },
 };
 
-export const CountUp = ({ to, duration = 4 }) => {
+export const CountUp = ({ to, duration = 2 }) => {
   const count = useMotionValue(0);
   const [display, setDisplay] = useState(0);
 
@@ -347,7 +347,7 @@ export const CountUp = ({ to, duration = 4 }) => {
     });
 
     const unsubscribe = count.on("change", (latest) => {
-      setDisplay(Math.round(latest));
+      setDisplay(Math.floor(latest));
     });
 
     return () => {

@@ -56,7 +56,7 @@ export default function OurClients() {
             transition={{ duration: 0.8 }}
             className="mx-auto max-w-3xl text-4xl md:text-5xl font-medium text-white"
           >
-            The stories <br /> we designed
+            The Industries <br /> we serve
           </motion.h2>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-10  px-4 md:px-20">
@@ -72,9 +72,9 @@ export default function OurClients() {
               <Image
                 src={client.img}
                 alt={client.name}
-                width={160}
+                width={180}
                 height={80}
-                className="max-h-10 w-auto  grayscale transition-all duration-300
+                className="max-h-30 w-auto  grayscale transition-all duration-300
                 group-hover:-translate-y-3 group-hover:opacity-100 group-hover:grayscale-0"
               />
               <p className="mt-3 text-xs text-gray-400 opacity-0 transition-all duration-300 group-hover:opacity-100">

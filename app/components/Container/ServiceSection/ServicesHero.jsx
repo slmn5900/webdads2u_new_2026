@@ -1,9 +1,10 @@
 "use client";
 import serviceBg from "@/app/assets/service-bg.webp";
+import MainLayout from "@/app/common/MainLayout";
 import { motion } from "framer-motion";
 export default function ServicesHero() {
   return (
-    <section
+    <MainLayout
       className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: `url(${serviceBg.src})`,
@@ -25,10 +26,17 @@ export default function ServicesHero() {
           }}
           className="text-white font-light leading-tight text-4xl md:text-5xl"
         >
-          Helping Brands to Grow with <br />
-          <span className="font-normal">Digital Products and Solutions</span>
+          We Build Powerful Digital Experiences <br />
+          <span className="font-normal">
+            That Help Your Business Grow Faster
+          </span>
         </motion.h1>
+
+        <p className="mt-6 text-white/70 max-w-2xl mx-auto text-sm md:text-base">
+          From strategy and design to development and marketing — we deliver
+          complete digital solutions tailored to your brand goals.
+        </p>
       </div>
-    </section>
+    </MainLayout>
   );
 }

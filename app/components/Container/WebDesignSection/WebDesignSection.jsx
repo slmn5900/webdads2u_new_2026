@@ -25,7 +25,6 @@ const WebDesignSection = () => {
         heading={<>The best web design company in Chennai</>}
         services={webDesign?.servicesData}
       />
-
       <PartnersRecognition />
       <TechStackSection />
       <StandOutSection
@@ -33,9 +32,8 @@ const WebDesignSection = () => {
         items={webDesign?.standOutData}
       />
       <ServiceRatingSection
-        title="Create a Strong Visual Identity with Our Web Design Services"
-        description="We design websites that look clear, professional, and easy to navigate. Every design is planned to present your brand properly, guide visitors smoothly, and create a strong first impression that builds trust.
-Our design experience covers many business types and website styles. Each design is made to stay consistent across all devices, keeping the layout balanced, readable, and comfortable for users on every screen."
+        title="Build a Strong Brand Identity with Our Branding Design Services"
+        description="We help businesses create clear and consistent brand identities through thoughtful branding and design. Our team works on brand visuals, design systems, and brand direction that reflect your business values and communicate clearly. Every branding effort is aligned to build trust, improve recognition, and present your brand confidently across digital and offline platforms."
         stats={stats}
       />
       <OurProcessSection {...webDesign?.processData} />

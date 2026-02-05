@@ -72,7 +72,7 @@ export default function IndustryStackedCards() {
               }}
               className="
                 absolute
-                w-[90vw] max-w-7xl
+                w-[90vw] 
                 h-[70vh]
                 rounded-[25px]
                 bg-[#3f4043]

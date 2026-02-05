@@ -1,8 +1,15 @@
-import MainLayout from "@/app/common/MainLayout";
+"use client";
 import React from "react";
+import CareerHero from "./CareerHero";
+import OpenPositions from "./OpenPositions";
 
 const CareerSection = () => {
-  return <MainLayout></MainLayout>;
+  return (
+    <>
+      <CareerHero />
+      <OpenPositions />
+    </>
+  );
 };
 
 export default CareerSection;

@@ -4,11 +4,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import linevictor from "@/app/assets/line-vector.svg";
+import MainLayout from "@/app/common/MainLayout";
 
 export default function StandOutSection({ title, items }) {
   const [active, setActive] = useState(null);
   return (
-    <section className="relative overflow-hidden bg-black py-32 text-white">
+    <MainLayout className="relative overflow-hidden bg-black py-32 text-white">
       <Image
         src={linevictor}
         alt="background lines"
@@ -34,16 +35,16 @@ export default function StandOutSection({ title, items }) {
               <p className="text-white/70 leading-relaxed text-sm">
                 {item.description}
               </p>
-              <button
+              {/* <button
                 onClick={() => setActive(active === index ? null : index)}
                 className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-white text-black flex items-center justify-center"
               >
                 <Plus size={18} />
-              </button>
+              </button> */}
             </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </MainLayout>
   );
 }

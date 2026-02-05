@@ -5,16 +5,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import MainLayout from "@/app/common/MainLayout";
-import { MapPin, Phone } from "lucide-react";
-import moon from "@/app/assets/moon.webp";
-
-const locations = [
-  { name: "USA", x: "50%", y: "18%" },
-  { name: "UAE", x: "54%", y: "45%" },
-  { name: "KSA", x: "42%", y: "58%" },
-  { name: "Pakistan", x: "65%", y: "55%" },
-];
-
 const categories = [
   "All",
   "Website",
