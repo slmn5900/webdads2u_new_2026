@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import detailsBanner from "@/app/assets/detailsbanner.svg";
+import detailsBanner from "@/app/assets/detailsBanner.svg";
 import { motion } from "framer-motion";
 import MainLayout from "@/app/common/MainLayout";
 import { useDispatch, useSelector } from "react-redux";
