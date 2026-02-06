@@ -2,7 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Plus, X } from "lucide-react";
-import { faqs } from "@/app/utils/mockdata";
+import { faqs } from "@/app/utils/commonMockdata";
 
 export default function FAQSection() {
   const [active, setActive] = useState(null);
@@ -49,7 +49,13 @@ export default function FAQSection() {
                   className="flex w-full items-center justify-between px-6 py-5 text-left text-white"
                 >
                   <span className="text-sm">{faq.q}</span>
-                  {isOpen ? <X size={18} /> : <Plus size={18} />}
+                  <motion.span
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="inline-flex"
+                  >
+                    {isOpen ? <X size={18} /> : <Plus size={18} />}
+                  </motion.span>
                 </button>
 
                 <AnimatePresence initial={false}>

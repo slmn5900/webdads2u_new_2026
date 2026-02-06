@@ -6,7 +6,7 @@ import Image from "next/image";
 import ArrowSvg from "@/app/assets/arrow.svg";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Link from "next/link";
-import { works } from "@/app/utils/mockdata";
+import { works } from "@/app/utils/commonMockdata";
 
 const categories = [
   "All",

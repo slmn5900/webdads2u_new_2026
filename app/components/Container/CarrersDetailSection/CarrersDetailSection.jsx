@@ -10,20 +10,28 @@ import {
 } from "@/app/store/slice/career";
 import Notification from "@/app/common/Notification";
 import { useParams } from "next/navigation";
-import { careers } from "@/app/utils/careerDetailsMockdata";
+import { getAllPositions } from "@/app/store/slice/positionSlice";
 
 export default function CareerDetails() {
   const dispatch = useDispatch();
   const { slug } = useParams();
-  const jobData = careers.find((c) => c.slug === slug);
   const { loading, message, error } = useSelector((state) => state.career);
   const [showNotification, setShowNotification] = useState(false);
+  const { positions } = useSelector((state) => state.position);
+
+  const jobData = positions?.find(
+    (job) =>
+      job.position
+        ?.toLowerCase()
+        ?.replace(/\s+/g, "-")
+        ?.replace(/[^\w-]/g, "") === slug,
+  );
 
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    jobTitle: jobData?.title || "",
+    jobTitle: jobData?.position || "",
     dob: "",
     gender: "",
     address: "",
@@ -32,14 +40,22 @@ export default function CareerDetails() {
   });
 
   useEffect(() => {
+    if (!positions?.length) {
+      dispatch(getAllPositions());
+    }
+  }, [dispatch, positions]);
+
+  useEffect(() => {
     if (jobData) {
-      setForm((prev) => ({ ...prev, job: jobData.title }));
+      setForm((prev) => ({
+        ...prev,
+        jobTitle: jobData.position,
+      }));
     }
   }, [jobData]);
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-
     if (name === "careerForm") {
       const file = files[0];
 
@@ -107,19 +123,27 @@ export default function CareerDetails() {
         >
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h1 className="text-3xl font-semibold mb-2">{jobData.title}</h1>
-              <p className="text-gray-400 mb-6">{jobData.meta}</p>
-              <h3 className="text-xl font-medium mb-2">Job Description</h3>
-              <p className="text-gray-300 mb-6">{jobData.description}</p>
+              <h1 className="text-3xl font-semibold mb-2">
+                {jobData.position}
+              </h1>
+              <div className="flex gap-2 items-center text-sm text-gray-400 my-1">
+                <p>{jobData.jobType}</p>
+                <span>/</span>
+                <p>{jobData.mode}</p>
+                <span>/</span>
+                <p>{jobData.location}</p>
+              </div>
+              <h3 className="text-xl font-medium mt-5">Job Description</h3>
+              <p className="text-gray-300 mb-6">{jobData.jobDescription}</p>
               <h3 className="text-xl font-medium mb-2">Key Responsibilities</h3>
               <ul className="list-disc pl-5 text-gray-300 space-y-2 mb-6">
-                {jobData.responsibilities.map((item, i) => (
+                {jobData?.keyResponsibilities?.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
               <h3 className="text-xl font-medium mb-2">Requirements</h3>
               <ul className="list-disc pl-5 text-gray-300 space-y-2">
-                {jobData.requirements.map((item, i) => (
+                {jobData?.requirements?.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
@@ -155,8 +179,9 @@ export default function CareerDetails() {
                   onChange={handleChange}
                   className="w-full border border-gray-300 outline-0 p-3 rounded"
                 >
-                  <option>{jobData.title}</option>
+                  <option value={jobData.position}>{jobData.position}</option>
                 </select>
+
                 <input
                   type="date"
                   name="dob"

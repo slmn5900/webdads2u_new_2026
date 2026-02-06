@@ -88,7 +88,7 @@ const ContactSection = () => {
       <MainLayout className="relative w-full min-h-screen flex items-center bg-cover bg-center px-3 md:px-20 bg-black">
         <div className=" grid lg:grid-cols-2 gap-16 items-center w-full">
           <div>
-            <h1 className="text-white text-4xl font-medium leading-tight mb-6">
+            <h1 className="text-white text-4xl md:text-5xl font-medium leading-tight mb-6">
               Grow Your Business With <br />
               <span className="text-pink-500">Our Expertise</span>
             </h1>

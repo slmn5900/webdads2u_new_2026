@@ -2,12 +2,11 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { serviceCategories } from "@/app/utils/mockdata";
+import { serviceCategories } from "@/app/utils/commonMockdata";
 
 export default function ServicesSection() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [selectedService, setSelectedService] = useState(null);
-
   const currentCategory = serviceCategories?.[activeCategory];
   const isDetailMode = selectedService !== null;
 
@@ -47,7 +46,7 @@ export default function ServicesSection() {
                       setSelectedService(null);
                     }}
                     whileHover={{ x: 8 }}
-                    className={`relative flex items-center gap-4 text-left w-full ${
+                    className={`relative flex items-center gap-4 cursor-pointer text-left w-full ${
                       active
                         ? "text-white"
                         : "text-gray-400 hover:text-gray-200"

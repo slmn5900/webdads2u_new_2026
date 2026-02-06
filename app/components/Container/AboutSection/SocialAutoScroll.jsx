@@ -1,16 +1,22 @@
 "use client";
-
+import CustomImage from "@/app/common/Image";
+import { getAllSocialMedia } from "@/app/store/slice/socialMediaSlice";
 import { motion } from "framer-motion";
-
-const posts = [
-  "/social/1.jpg",
-  "/social/2.jpg",
-  "/social/3.jpg",
-  "/social/4.jpg",
-  "/social/5.jpg",
-];
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function SocialAutoScroll() {
+  const dispatch = useDispatch();
+  const { list } = useSelector((state) => state.social);
+  console.log(list);
+
+ useEffect(() => {
+  if (!list.length) {
+    dispatch(getAllSocialMedia());
+  }
+}, [dispatch, list.length]);
+
+
   return (
     <section className="bg-black py-24 overflow-hidden">
       <div className="px-6 mb-12">
@@ -30,12 +36,16 @@ export default function SocialAutoScroll() {
           }}
           whileHover={{ animationPlayState: "paused" }}
         >
-          {[...posts, ...posts].map((img, i) => (
+          {[...list, ...list].map((item, i) => (
             <div
               key={i}
               className="w-[280px] h-[360px] rounded-2xl overflow-hidden shrink-0"
             >
-              <img src={img} alt="" className="w-full h-full object-cover" />
+              <CustomImage
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover"
+              />
             </div>
           ))}
         </motion.div>

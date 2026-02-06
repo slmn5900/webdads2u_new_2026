@@ -1,12 +1,13 @@
 "use client";
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const services = [
   {
     title: "Web Design & Development",
+    slug: "web-design-and-development",
     desc: "Modern, scalable websites built for performance and growth.",
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80",
@@ -19,21 +20,26 @@ const services = [
     ],
   },
   {
-    title: "UI / UX Design",
-    desc: "We craft beautiful interfaces and user experiences people love.",
+    title: "Digital Solutions",
+    slug: "digital-solutions",
+    desc: "We help brands grow online using SEO, paid ads and AI marketing.",
     image:
-      "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=900&q=80",
+      "https://images.unsplash.com/photo-1556155092-8707de31f9c4?w=900&q=80",
     children: [
-      "UX Design",
-      "UX Audit",
-      "Landing Page Design",
-      "PSD to HTML",
-      "Responsive Website Design",
+      "SEO",
+      "LLM SEO",
+      "GEO",
+      "Local SEO",
+      "Pay Per Click Ads",
+      "E-mail Marketing",
+      "App Store Optimization",
+      "Social Media Marketing",
     ],
   },
 ];
 
 export default function ServicesShowcase() {
+  const router = useRouter();
   const [index, setIndex] = useState(0);
 
   const nextSlide = () => {
@@ -42,8 +48,12 @@ export default function ServicesShowcase() {
 
   const progress = ((index + 1) / services.length) * 100;
 
+  const handleNavigate = () => {
+    router.push(`/web-design-and-development`);
+  };
+
   return (
-    <div className="relative bg-black text-white py-24 overflow-hidden px-3 md:px-20">
+    <div className="relative bg-black text-white py-24 overflow-hidden px-4 md:px-20">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -58,8 +68,8 @@ export default function ServicesShowcase() {
           </span>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-semibold">
-          Development <span className="font-normal">Services</span>
+        <h2 className="text-4xl md:text-5xl font-semibold mt-3">
+          Development Services
         </h2>
       </motion.div>
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[70%] h-[3px] bg-white/20">
@@ -83,6 +93,20 @@ export default function ServicesShowcase() {
               {services[index].title}
             </h2>
             <p className="text-white/70 max-w-md">{services[index].desc}</p>
+            <motion.button
+              onClick={handleNavigate}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="
+                mt-6 px-8 py-3 rounded-full
+                bg-linear-to-r from-purple-600 to-fuchsia-600
+                text-white font-medium
+                shadow-lg hover:shadow-purple-500/40
+                transition-all duration-300
+              "
+            >
+              Discover More
+            </motion.button>
           </motion.div>
         </AnimatePresence>
         <div

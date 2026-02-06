@@ -166,7 +166,7 @@ const Footer = () => {
         <img
           src={Footerbottomimg.src}
           alt="Footer decorative text"
-          className="w-full opacity-25 translate-y-4 md:translate-y-8"
+          className="w-full opacity-25 translate-y-4 md:translate-y-12"
         />
       </div>
       <div className="relative z-20 border-t border-white/10 bg-linear-to-r from-[#0f0f14] via-[#14141c] to-[#0f0f14]">
@@ -176,7 +176,7 @@ const Footer = () => {
             <span className="h-4 w-px bg-white/30" />
             <Link href="/terms-conditions">Terms & Conditions</Link>
           </div>
-          <div>© 2026. Webdads.</div>
+          <div>© {new Date().getFullYear()}. Webdads Private Limited</div>
         </div>
       </div>
     </footer>

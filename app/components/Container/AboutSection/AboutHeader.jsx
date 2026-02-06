@@ -1,7 +1,7 @@
 "use client";
 const AboutHeader = () => {
   return (
-    <div className="relative md:h-screen  overflow-hidden text-white">
+    <div className="relative h-screen  overflow-hidden text-white">
       <div className="absolute inset-0 overflow-hidden">
         <video
           src="/videos/heroabout.mp4"

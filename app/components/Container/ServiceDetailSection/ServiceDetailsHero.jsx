@@ -9,7 +9,7 @@ import {
   createEnquiry,
   clearError,
   clearMessage,
-} from "@/app/store/slice/enquirySlice";
+} from "@/app/store/slice/enquirySlice"; 
 import { errorAlert, successAlert } from "@/app/utils/alertService";
 
 const fadeUp = {

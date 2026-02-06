@@ -41,15 +41,15 @@ const HeroSection = () => {
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
-      <MainLayout className="relative z-10 px-4 md:px-20 h-full flex items-end pb-6">
+      <MainLayout className="relative z-10 px-4 md:px-20 h-full flex items-center pb-6">
         <div className="w-full flex flex-col items-center text-center text-white">
           <AnimatePresence mode="wait">
             <motion.h1
               key={current}
               className="
-                min-h-[57px] md:min-h-[58px]
-                text-xl md:text-3xl lg:text-4xl
-                font-medium leading-tight 
+                min-h-[41px] md:min-h-[58px]
+                text-xl md:text-3xl lg:text-5xl
+                font-medium   md:leading-tight 
               "
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -59,7 +59,7 @@ const HeroSection = () => {
               {headlines[current]}
             </motion.h1>
           </AnimatePresence>
-          <p className="text-xs md:text-sm opacity-90 max-w-xl">
+          <p className="text-xs md:text-sm opacity-90 md:mt-3 max-w-xl">
             Website Design and Development Company in Chennai
           </p>
           <div className="flex gap-6 items-center mt-4">

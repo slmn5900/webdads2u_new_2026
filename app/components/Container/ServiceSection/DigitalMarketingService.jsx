@@ -41,7 +41,7 @@ export default function DigitalMarketingSection() {
           </span>
         </div>
         <h2 className="text-4xl md:text-5xl  font-semibold leading-13">
-          Digital <span className="font-normal">Solutions</span>
+          Digital Solutions
         </h2>
       </motion.div>
       <div className="relative z-10  grid grid-cols-1 lg:grid-cols-3 gap-14 px-6">
@@ -85,7 +85,7 @@ export default function DigitalMarketingSection() {
         >
           {digitalMarketingService.points.map((item, i) => (
             <li key={i} className="text-white font-medium">
-             • {item}
+              • {item}
             </li>
           ))}
         </motion.ul>

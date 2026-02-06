@@ -18,7 +18,7 @@ const menuItems = [
 
 const servicesData = [
   {
-    title: "web design and developemnt",
+    title: "Web design & development",
     children: [
       "UI UX Design",
       "Wordpress Web Development",
@@ -105,6 +105,11 @@ const servicesData = [
       "Blockchain Development",
     ],
   },
+];
+const disabledMainServices = [
+  "Digital Solutions",
+  "Software Development",
+  "Emerging Technologies",
 ];
 
 const MenuToggle = ({ isOpen, toggle }) => (
@@ -202,6 +207,8 @@ export default function Header() {
   };
 
   const goToMainService = (serviceTitle) => {
+    if (disabledMainServices.includes(serviceTitle.trim())) return;
+
     const slug = serviceTitle
       .toLowerCase()
       .replace(/&/g, "and")
@@ -251,7 +258,7 @@ export default function Header() {
                 >
                   <button
                     onClick={() => handleNavClick(item)}
-                    className="relative group text-sm font-medium text-white cursor-pointer"
+                    className="relative group text-sm font-semibold text-white cursor-pointer"
                   >
                     {item.label}
                     <span
@@ -273,14 +280,19 @@ export default function Header() {
                       onMouseEnter={handleDropdownMouseEnter}
                       onMouseLeave={handleDropdownMouseLeave}
                     >
-                      <div className="bg-black/90 backdrop-blur-xl border border-white/50 rounded-2xl p-8 shadow-2xl">
+                      <div className="bg-black/90 backdrop-blur-xl border border-white/50 rounded-2xl p-7 shadow-2xl">
                         <div className="grid grid-cols-4 gap-8">
                           {servicesData?.map((service, index) => (
                             <div key={index}>
                               <button
                                 onMouseEnter={() => setOpenService(index)}
                                 onClick={() => goToMainService(service.title)}
-                                className="flex items-center justify-between w-full text-white font-semibold mb-3 cursor-pointer hover:text-purple-400 transition"
+                                className={`flex items-center justify-between w-full text-white font-semibold mb-3 transition
+${
+  disabledMainServices.includes(service.title.trim())
+    ? "cursor-default opacity-70"
+    : "cursor-pointer hover:text-purple-400"
+}`}
                               >
                                 {service.title}
 
@@ -324,14 +336,34 @@ export default function Header() {
               ))}
             </nav>
             <div className="flex items-center gap-3">
-              <button
-                onClick={() => setHireOpen(true)}
-                className="hidden lg:flex items-center cursor-pointer gap-2 px-5 py-2 rounded-full text-sm font-semibold text-white
-bg-linear-to-r from-purple-600 to-fuchsia-600 hover:from-purple-700 hover:to-fuchsia-700"
+              <div
+                className="hidden lg:inline-block relative rounded-full p-0.5
+ overflow-hidden"
               >
-                Hire us <ArrowRight size={16} />
-              </button>
-
+                <motion.div
+                  className="absolute inset-0 rounded-full"
+                  style={{
+                    background:
+                      "linear-gradient(90deg,#9333ea,#d946ef,#9333ea)",
+                    backgroundSize: "200% 100%",
+                  }}
+                  animate={{ backgroundPosition: ["0% 50%", "200% 50%"] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                />
+                <button
+                  onClick={() => setHireOpen(true)}
+                  className="
+      relative z-10
+      flex items-center gap-2 px-5 py-2 rounded-full
+      text-sm font-semibold text-white
+      bg-linear-to-r from-purple-600 to-fuchsia-600
+      hover:from-purple-700 hover:to-fuchsia-700
+      transition
+    "
+                >
+                  Hire us <ArrowRight size={16} />
+                </button>
+              </div>
               <a
                 href="mailto:info@webdads2u.com"
                 className="hidden lg:flex text-white h-8 w-8 items-center justify-center rounded-full border border-white/20 hover:bg-purple-500/20"

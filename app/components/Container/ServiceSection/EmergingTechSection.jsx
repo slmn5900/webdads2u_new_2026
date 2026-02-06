@@ -3,6 +3,7 @@
 import MainLayout from "@/app/common/MainLayout";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const emergingTechService = {
   title: "Emerging Tech",
@@ -21,6 +22,11 @@ const emergingTechService = {
 };
 
 export default function EmergingTechSection() {
+  const router = useRouter();
+
+  const handleNavigate = () => {
+    router.push(`/emerging-technologies`);
+  };
   return (
     <MainLayout className="relative bg-black text-white py-28 overflow-hidden px-3 md:px-20">
       <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]" />
@@ -38,7 +44,7 @@ export default function EmergingTechSection() {
           </span>
         </div>
         <h2 className="text-4xl md:text-5xl  font-semibold leading-13">
-          Emerging <span className="font-normal">Tech</span>
+          Emerging Tech
         </h2>
       </motion.div>
       <div className="relative z-10  grid grid-cols-1 lg:grid-cols-3 gap-14 px-6">
@@ -53,7 +59,10 @@ export default function EmergingTechSection() {
             {emergingTechService.description}
           </p>
 
-          <button className="mt-8 w-fit px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-700 transition text-sm">
+          <button
+            onClick={handleNavigate}
+            className="mt-8 w-fit px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-700 transition text-sm cursor-pointer"
+          >
             Discover More
           </button>
         </motion.div>
@@ -82,7 +91,7 @@ export default function EmergingTechSection() {
         >
           {emergingTechService.points.map((item, i) => (
             <li key={i} className="text-white font-medium">
-             • {item}
+              • {item}
             </li>
           ))}
         </motion.ul>

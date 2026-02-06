@@ -73,7 +73,7 @@ export default function IndustryStackedCards() {
               className="
                 absolute
                 w-[90vw] 
-                h-[70vh]
+                h-[90vh] md:h-[70vh]
                 rounded-[25px]
                 bg-[#3f4043]
                 p-10 md:p-14
@@ -101,7 +101,7 @@ export default function IndustryStackedCards() {
                 </div>
               </div>
 
-              <div className="rounded-2xl overflow-hidden">
+              <div className="rounded-2xl overflow-hidden hidden md:block">
                 <img
                   src={card.image}
                   alt={card.title}

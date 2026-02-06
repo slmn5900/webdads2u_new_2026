@@ -1,6 +1,6 @@
 "use client";
 import TestimonialCard from "@/app/common/TestimonialCard";
-import { testimonials } from "@/app/utils/mockdata";
+import { testimonials } from "@/app/utils/commonMockdata";
 
 export default function TestimonialsSection() {
   return (

@@ -3,6 +3,7 @@
 import MainLayout from "@/app/common/MainLayout";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const service = {
   title: "App Development",
@@ -21,6 +22,10 @@ const service = {
 };
 
 export default function AdvertisingCreativeSection() {
+  const router = useRouter();
+  const handleNavigate = () => {
+    router.push(`/app-development`);
+  };
   return (
     <MainLayout className="relative bg-black text-white  overflow-hidden px-3 md:px-20">
       <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]" />
@@ -50,7 +55,10 @@ export default function AdvertisingCreativeSection() {
         >
           <p className="text-white/70 leading-relaxed">{service.description}</p>
 
-          <button className="mt-8 w-fit px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-700 transition text-sm">
+          <button
+            onClick={handleNavigate}
+            className="mt-8 w-fit px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-700 transition text-sm cursor-pointer"
+          >
             Discover More
           </button>
         </motion.div>

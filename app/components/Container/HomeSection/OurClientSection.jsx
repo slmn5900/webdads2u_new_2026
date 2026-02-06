@@ -12,7 +12,6 @@ import designed8 from "@/app/assets/designed8.svg";
 import designed9 from "@/app/assets/designed9.svg";
 import designed10 from "@/app/assets/designed10.svg";
 import linevictor from "@/app/assets/line-vector.svg";
-import gif from "@/app/assets/globe2.gif";
 
 const clients = [
   { name: "Food & Beverage", img: designed1 },
@@ -83,25 +82,6 @@ export default function OurClients() {
             </motion.div>
           ))}
         </div>
-        {/* <div className=" flex items-center justify-end gap-4 text-gray-300">
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{
-              repeat: Infinity,
-              duration: 40,
-              ease: "linear",
-            }}
-          >
-            <Image
-              src={gif}
-              alt="globe rotation"
-              width={50}
-              height={50}
-              className="pointer-events-none"
-            />
-          </motion.div>
-          <span className="text-sm">100+ Clients worldwide</span>
-        </div> */}
       </div>
     </section>
   );
