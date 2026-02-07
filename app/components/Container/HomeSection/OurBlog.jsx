@@ -1,40 +1,10 @@
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import slide from "@/app/assets/blog1.avif";
-import slide1 from "@/app/assets/blog2.webp";
-import slide2 from "@/app/assets/blog3.webp";
-
-const blogs = [
-  {
-    title: "SEO Algorithm Updates for the year 2023",
-    image: slide,
-    category: ["Digital Marketing", "DG NEWS"],
-    author: "Umair Khan",
-    readTime: "November 17, 2023",
-  },
-  {
-    title: "Introduction to Python – A developer perspective",
-    image: slide1,
-    category: ["Python"],
-    author: "Maria Khan",
-    readTime: "December 2, 2023",
-  },
-  {
-    title: "What is CRM Software Development",
-    image: slide2,
-    category: ["Web Development"],
-    author: "Asghar Paracha",
-    readTime: "March 19, 2024",
-  },
-  {
-    title: "The 9 Best SaaS Marketing Agencies in 2024",
-    image: slide,
-    category: ["Web Development"],
-    author: "Asghar Paracha",
-    readTime: "9 minutes read",
-  },
-];
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllBlogs } from "@/app/store/slice/blog";
+import CustomImage from "@/app/common/Image";
+import { useRouter } from "next/navigation";
 
 const marqueeVariants = {
   animate: {
@@ -49,6 +19,14 @@ const marqueeVariants = {
 };
 
 export default function BlogSection() {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const { blogs } = useSelector((state) => state.blog);
+
+  useEffect(() => {
+    dispatch(getAllBlogs());
+  }, [dispatch]);
+
   return (
     <section className="bg-[#0b0b12] py-28 overflow-hidden">
       <div className="mx-auto">
@@ -75,39 +53,31 @@ export default function BlogSection() {
           >
             {[...blogs, ...blogs].map((blog, i) => (
               <article
-                key={`${blog.title}-${i}`}
-                className="group min-w-[320px] max-w-[320px]"
+                key={`${blog._id}-${i}`}
+                onClick={() => router.push(`/blog/${blog._id}`)}
+                className="group min-w-[320px] max-w-[320px] cursor-pointer"
               >
                 <div className="relative h-60 overflow-hidden rounded-2xl">
-                  <Image
-                    src={blog.image}
+                  <CustomImage
+                    src={blog.blogImage[0]}
                     alt={blog.title}
                     fill
                     sizes="320px"
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
-
                 <div className="p-6">
-                  <div className="mb-4 flex flex-wrap gap-2">
-                    {blog.category.map((cat, idx) => (
-                      <span
-                        key={idx}
-                        className="rounded-full bg-white/5 px-3 py-1 text-xs text-gray-300"
-                      >
-                        {cat}
-                      </span>
-                    ))}
-                  </div>
+                  <span className="rounded-full bg-white/20 backdrop-blur-lg border border-white/30 px-3 py-1 text-xs text-white shadow-lg">
+                    {blog.project}
+                  </span>
 
-                  <h3 className="mb-4 text-lg font-medium text-white leading-snug">
+                  <h3 className="mb-4  mt-2 text-lg font-medium text-white leading-snug">
                     {blog.title}
                   </h3>
-
                   <div className="flex items-center gap-2 text-xs text-gray-400">
                     <span>By {blog.author}</span>
                     <span>•</span>
-                    <span>{blog.readTime}</span>
+                    <span>{new Date(blog.createdAt).toLocaleDateString()}</span>
                   </div>
                 </div>
               </article>

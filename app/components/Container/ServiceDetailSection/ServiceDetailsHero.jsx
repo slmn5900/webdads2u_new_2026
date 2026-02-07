@@ -68,9 +68,7 @@ export default function ServiceDetailsHero({ serviceData }) {
         priority
         className="object-cover"
       />
-
       <div className="absolute inset-0 bg-black/50" />
-
       <motion.div
         className="relative z-10 max-w-3xl px-20"
         variants={fadeUp}
@@ -79,20 +77,18 @@ export default function ServiceDetailsHero({ serviceData }) {
       >
         <div className="flex items-center gap-2 mb-2">
           <span className="h-2 w-2 rounded-full bg-purple-500" />
-          <p className="text-sm tracking-widest capitalize">
+          <p className="text-sm tracking-widest capitalize font-semibold mb-2">
             {serviceData?.title}
           </p>
         </div>
-
         <h1 className="text-6xl leading-15 mb-3">{serviceData?.subTitle}</h1>
-
-        <p className="text-white text-xs max-w-xl">
+        <p className="text-white text-sm max-w-xl font-semibold">
           {serviceData?.description}
         </p>
       </motion.div>
       <motion.form
         onSubmit={handleSubmit}
-        className="absolute right-20 top-1/2 -translate-y-1/2 w-[400px] bg-black/60 backdrop-blur-xl border border-white/20 rounded-3xl p-6"
+        className="absolute right-20 top-1/2 -translate-y-1/2 w-[350px] bg-black/60 backdrop-blur-xl border border-white/20 rounded-3xl p-6 mt-6"
         variants={fadeUp}
         initial="hidden"
         animate="visible"

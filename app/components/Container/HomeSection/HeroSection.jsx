@@ -59,7 +59,7 @@ const HeroSection = () => {
               {headlines[current]}
             </motion.h1>
           </AnimatePresence>
-          <p className="text-xs md:text-sm opacity-90 md:mt-3 max-w-xl">
+          <p className="text-xs md:text-sm opacity-90 md:mt-3 max-w-xl font-medium">
             Website Design and Development Company in Chennai
           </p>
           <div className="flex gap-6 items-center mt-4">

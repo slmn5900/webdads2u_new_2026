@@ -7,7 +7,6 @@ import linevictor from "@/app/assets/line-vector.svg";
 import MainLayout from "@/app/common/MainLayout";
 
 export default function StandOutSection({ title, items }) {
-  const [active, setActive] = useState(null);
   return (
     <MainLayout className="relative overflow-hidden bg-black py-32 text-white">
       <Image

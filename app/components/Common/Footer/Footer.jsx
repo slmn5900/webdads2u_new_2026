@@ -1,9 +1,10 @@
 "use client";
-
 import Link from "next/link";
 import { Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import Footerbottomimg from "@/app/assets/footerbottomimg.svg";
+import schedule from "@/app/assets/schedule.svg";
+import Image from "next/image";
 
 const Footer = () => {
   const socials = [
@@ -41,10 +42,12 @@ const Footer = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <p className="text-lg opacity-80">Digital</p>
-              <h2 className="text-6xl font-bold">
-                We<span>b</span>dads
-              </h2>
+              <p className="text-lg opacity-80 mb-3">Digital</p>
+              <Image
+                src={schedule}
+                className="w-15 h-15 rounded-full"
+                alt="avatar"
+              />
             </motion.div>
             <div className="flex items-center w-full mt-6 gap-8">
               <span className="flex-1 h-[3px] bg-linear-to-r from-transparent via-purple-500 to-transparent" />
@@ -176,7 +179,7 @@ const Footer = () => {
             <span className="h-4 w-px bg-white/30" />
             <Link href="/terms-conditions">Terms & Conditions</Link>
           </div>
-          <div>© {new Date().getFullYear()}. Webdads Private Limited</div>
+          <div className="uppercase">© {new Date().getFullYear()}. Webdads Private Limited</div>
         </div>
       </div>
     </footer>

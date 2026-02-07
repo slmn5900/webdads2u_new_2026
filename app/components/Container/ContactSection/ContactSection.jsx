@@ -14,12 +14,13 @@ import {
   createProduct,
 } from "@/app/store/slice/contact";
 import { errorAlert } from "@/app/utils/alertService";
+import HireUsModal from "@/app/common/HireUsModal";
 
 const ContactSection = () => {
   const dispatch = useDispatch();
   const { loading, message, error } = useSelector((state) => state.contact);
   const [showNotification, setShowNotification] = useState(false);
-
+  const [hireOpen, setHireOpen] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -56,6 +57,7 @@ const ContactSection = () => {
 
   return (
     <>
+      <HireUsModal open={hireOpen} onClose={() => setHireOpen(false)} />
       <MainLayout
         className="relative w-full min-h-screen flex items-center bg-cover bg-center py-30 px-3 md:px-20"
         style={{
@@ -77,7 +79,10 @@ const ContactSection = () => {
               every task and hold belief in the potency of simplicity in our Web
               Design & Development Company in Chennai.!
             </p>
-            <button className="bg-linear-to-r from-purple-600 to-pink-500 text-white px-8 py-3 rounded-full hover:scale-105 transition">
+            <button
+              onClick={() => setHireOpen(true)}
+              className="bg-linear-to-r from-purple-600 to-pink-500 text-white px-8 py-3 rounded-full hover:scale-105 transition"
+            >
               Lets Get Started
             </button>
           </div>
@@ -97,9 +102,6 @@ const ContactSection = () => {
               every task and hold belief in the potency of simplicity in our Web
               Design & Development Company in Chennai.
             </p>
-            <button className="bg-linear-to-r from-purple-600 to-pink-500 text-white px-8 py-3 rounded-full hover:scale-105 transition">
-              Lets Get Started
-            </button>
           </div>
 
           <div className="relative w-full">

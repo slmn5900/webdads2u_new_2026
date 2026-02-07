@@ -226,7 +226,7 @@ export default function Header() {
           className={`mx-auto rounded-full relative ${
             isScrolled
               ? "bg-black/60 backdrop-blur-xl border border-white/10"
-              : ""
+              : "px-16"
           }`}
           animate={{ maxWidth: isScrolled ? "75%" : "100%" }}
         >
@@ -361,7 +361,7 @@ ${
       transition
     "
                 >
-                  Hire us <ArrowRight size={16} />
+                  Get Started <ArrowRight size={16} />
                 </button>
               </div>
               <a

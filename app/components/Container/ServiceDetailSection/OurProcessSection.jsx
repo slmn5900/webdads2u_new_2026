@@ -38,13 +38,12 @@ export default function OurProcessSection({
               >
                 {Icon && <Icon size={32} className="text-white/50 mb-4" />}
 
-                <h3 className="text-xl mb-2 font-medium">{step.title}</h3>
-
+                <h3 className="text-xl mb-2 font-semibold">{step.title}</h3>
                 <ul className="space-y-2">
                   {step.points?.map((point, i) => (
                     <li
                       key={i}
-                      className="flex items-center gap-3 text-white/70"
+                      className="flex items-center gap-3 leading-6"
                     >
                       <span className="h-2 w-2 rounded-full bg-purple-600" />
                       {point}
