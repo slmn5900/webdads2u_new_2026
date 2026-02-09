@@ -1512,3 +1512,149 @@ export const brandingDesign = {
     ],
   },
 };
+
+export const commonServiceContent = {
+  title: "Our Services",
+  subTitle: "Solutions Designed to Support Business Growth",
+  description:
+    "We deliver clear, practical, and well-structured digital solutions. Every service is planned to support your business goals, improve user experience, and ensure long-term usability and performance.",
+
+  servicesData: [
+    {
+      title: "Custom Solutions",
+      description:
+        "Every business has unique needs. We create customized solutions that match your requirements, workflows, and long-term growth plans.",
+      link: "/services/custom",
+    },
+    {
+      title: "User-Focused Design",
+      description:
+        "We focus on simplicity and clarity. Our designs help users navigate easily, understand content quickly, and interact without confusion.",
+      link: "/services/ui-ux",
+    },
+    {
+      title: "Scalable Development",
+      description:
+        "Our solutions are built with future growth in mind. The structure allows easy updates, improvements, and expansion as your business evolves.",
+      link: "/services/scalable",
+    },
+    {
+      title: "Performance Optimization",
+      description:
+        "We ensure fast loading, smooth performance, and reliable functionality to deliver a consistent experience across all platforms.",
+      link: "/services/performance",
+    },
+    {
+      title: "Maintenance & Support",
+      description:
+        "After delivery, we continue to support updates, improvements, and small changes to keep everything running smoothly.",
+      link: "/services/support",
+    },
+  ],
+
+  standOutData: [
+    {
+      title: "Clear Planning From Start",
+      description:
+        "Every project begins with structured planning to avoid confusion and ensure smooth execution.",
+    },
+    {
+      title: "Simple & Easy-to-Use Structure",
+      description:
+        "Layouts and systems are designed for clarity, helping users complete tasks without difficulty.",
+    },
+    {
+      title: "Professional Presentation",
+      description:
+        "Clean and organized presentation builds confidence and trust from the first interaction.",
+    },
+    {
+      title: "Works Across All Devices",
+      description:
+        "Solutions adapt seamlessly to mobiles, tablets, and desktops for consistent usability.",
+    },
+    {
+      title: "Flexible for Future Updates",
+      description:
+        "The system structure allows easy updates and improvements without major rework.",
+    },
+    {
+      title: "Reliable Ongoing Support",
+      description:
+        "We stay available after delivery to assist with improvements, fixes, and guidance.",
+    },
+  ],
+
+  faqData: [
+    {
+      q: "How do you approach new projects?",
+      a: "We start by understanding business goals and user needs. Planning comes first, followed by structured execution and regular reviews.",
+    },
+    {
+      q: "Do you offer end-to-end services?",
+      a: "Yes. We manage planning, execution, testing, and delivery to maintain quality and consistency.",
+    },
+    {
+      q: "Are solutions customized or template-based?",
+      a: "All solutions are customized based on requirements. We avoid generic templates to ensure clarity and uniqueness.",
+    },
+    {
+      q: "Will the solution work on all devices?",
+      a: "Yes. We ensure compatibility across mobile, tablet, and desktop devices.",
+    },
+    {
+      q: "Do you provide support after delivery?",
+      a: "Yes. We assist with updates, improvements, and guidance after project completion.",
+    },
+  ],
+
+  processData: {
+    subtitle: "Our Process",
+    title: "How We Deliver Reliable Solutions",
+    description:
+      "Our process follows a clear and organized flow. Each step is handled carefully to avoid delays, reduce confusion, and ensure quality results.",
+
+    steps: [
+      {
+        title: "Planning",
+        icon: "planning",
+        points: [
+          "Understanding Requirements",
+          "Goal Definition",
+          "Structure Planning",
+          "Initial Approval",
+        ],
+      },
+      {
+        title: "Execution",
+        icon: "development",
+        points: [
+          "Design & Development",
+          "Feature Implementation",
+          "Internal Review",
+          "Client Feedback",
+        ],
+      },
+      {
+        title: "Testing",
+        icon: "testing",
+        points: [
+          "Quality Check",
+          "Device & Performance Testing",
+          "Final Review",
+          "Approval Confirmation",
+        ],
+      },
+      {
+        title: "Delivery",
+        icon: "deployment",
+        points: [
+          "Final Handover",
+          "Documentation",
+          "Minor Adjustments",
+          "Ongoing Support",
+        ],
+      },
+    ],
+  },
+};

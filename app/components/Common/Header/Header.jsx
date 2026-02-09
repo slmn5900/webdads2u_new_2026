@@ -58,7 +58,6 @@ const servicesData = [
       "Domain Registration",
       "Hosting",
       "Responsive Website",
-      "UI/UX Design",
       "Website Redesign",
       "Maintenance",
     ],
@@ -200,7 +199,11 @@ export default function Header() {
   };
 
   const goToService = (service, child) => {
-    const slug = child.toLowerCase().replace(/&/g, "and").replace(/\s+/g, "-");
+    const slug = child
+      .trim()
+      .toLowerCase()
+      .replace(/&/g, "and")
+      .replace(/\s+/g, "-");
     setIsServicesHovered(false);
     setOpenService(null);
     router.push(`/${slug}`);
